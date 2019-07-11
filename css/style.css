@@ -1,0 +1,28 @@
+@charset "utf-8";
+.gold {color: #CDA34F !important;}
+
+.pink {color: #FFAA92 !important;}
+
+.greyblue{color:#A987C0 !important;}
+.top-pad{
+	padding-top:0.5em;
+}
+.transparent{
+	color: grey!important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+.margin-top{
+	margin-top:100px;
+}
+.book{
+	max-width: 200px;
+	margin:15px;
+}
+.shelf{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.inline{display:inline;}
