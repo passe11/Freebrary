@@ -9,20 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/649b675417.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="javascript/script.js"></script>
-	<script >
-		var query = location.search.substring(1);
-		var parameters = {};
-		var keyValues = query.split(/&/);
-for (var keyValue in keyValues) {
-    var keyValuePairs = keyValue.split(/=/);
-    var key = keyValuePairs[0];
-    var value = keyValuePairs[1];
-    parameters[key] = value;
-}
-
-alert(parameters['yourKey']);
-
+	<script src="javascript/search.js"></script>
 	</script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -57,8 +44,8 @@ alert(parameters['yourKey']);
   </ul>
   </div>
 </nav>
-
-<body class="container-fluid margin-top">
+<!-- loads the search() function on load. The search function will remove any book that does not match the search criteria in localstorage-->
+<body onload="search()" class="container-fluid margin-top">
 <section class="row">
 	<div class="col-12 col-md-3">
 		<ul>
@@ -74,19 +61,19 @@ alert(parameters['yourKey']);
 		</li>
 	</div>
 	<div class="col-12 col-md-8">
-		<h2 class="display-5">Search<span id="par">Paramether</span></h2>
+		<h2 class="display-5">Search&nbsp;&ndash;&nbsp;<span id="par">Paramether</span></h2>
 		<div class="d-flex flex-row flex-wrap justify-content-left">
-			<div class="card book disponible papier">
+			<div id="Calculus" class="card book disponible papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
 				<p class="card-text">disponible<br>papier</p>
 				</div>
 			</div>
-			<div class="card book disponible">
+			<div id="Calculus 2" class="card book disponible">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title">Calculus 2</h3>
 				<p class="card-text">disponible</p>
 				</div>
 			</div>
@@ -135,6 +122,9 @@ alert(parameters['yourKey']);
 		</div>
 	</div>
 </section>
+	<script >
+		document.getElementById("par").innerHTML = localStorage.getItem("search");
+	</script>
 </body>
 	<div class="bottom container-fluid" >
 	<div class="row">

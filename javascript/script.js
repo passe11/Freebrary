@@ -1,4 +1,6 @@
 var find="";
+
+//This displays the dropdown menu with available class filters
 function dropCour() {
   var x = document.getElementById("cours");
   if (x.style.display === "none") {
@@ -7,12 +9,7 @@ function dropCour() {
     x.style.display = "none";
   }
 } 
-function searchEntry(){
-//var newWindow= window.open("file:///C:/Users/marleaup/Downloads/Projet-master/Projet-master/search.html");
-//newWindow.document.getElementById("par").innerHTML="bob";
-var yourValue = 'something';
-window.open('file:///C:/Users/marleaup/Downloads/Projet-master/Projet-master/search.html?yourKey=' + yourValue);
-}
+
 
 function disponible() {
   if(find.includes("disponible")){
@@ -70,7 +67,14 @@ for(i=0;i<show.length;i++){
    show[i].style.display = "block";
   }
 }
-
-
-
 }
+
+/*Added this function to act before the form submit actually goes trought.
+Where setting a value for search in local storage. This way are search page knows what its looking for
+Thats why we return true at the end. returning false would block it.
+*/
+$('#myform').submit(function() {
+  localStorage.setItem("search", document.getElementById("form-field").value);
+  alert(document.getElementById("form-field").value);
+    alert("works") ;   return true; // return false to cancel form action
+});
