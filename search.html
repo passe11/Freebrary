@@ -8,7 +8,22 @@
 	<!--<link rel="shortcut icon" href="#favicon.ico" type="image/x-icon" />-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/649b675417.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="javascript/script.js"></script>
+	<script >
+		var query = location.search.substring(1);
+		var parameters = {};
+		var keyValues = query.split(/&/);
+for (var keyValue in keyValues) {
+    var keyValuePairs = keyValue.split(/=/);
+    var key = keyValuePairs[0];
+    var value = keyValuePairs[1];
+    parameters[key] = value;
+}
 
+alert(parameters['yourKey']);
+
+	</script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -25,7 +40,7 @@
         	<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
     		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           		<a class="dropdown-item" href="#">Psychologie</a>
-          		<a class="dropdown-item" href="#">Mathematique</a>
+          		<a class="dropdown-item" href="#"><b>Mathematique</b></a>
           		<div class="dropdown-divider"></div>
           		<a class="dropdown-item" href="#">Livres Populaires</a>
           		<a class="dropdown-item" href="#">Nouvelle addition</a>
@@ -34,7 +49,7 @@
 <ul class="nav navbar-nav navbar-right">
 	<li>
     <form class="form-inline">
-    <button onclick="searchEntry()" class="transparent fas fa-search" ></button>
+    <button class="transparent fas fa-search" type="submit"></button>
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
   </form>
 </li>
@@ -44,14 +59,63 @@
 </nav>
 
 <body class="container-fluid margin-top">
-	<section>
-		<h2 class="display-5">Livres Populaires&nbsp;<i class="fas fa-angle-right"></i></h2>
-		<div class="d-flex flex-row justify-content-center">
-			<div class="card book">
+<section class="row">
+	<div class="col-12 col-md-3">
+		<ul>
+		<li>Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></li>
+		<li>Livre numérique&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></li>
+		<li>Livre papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></li>
+		<li>Cours&nbsp;<button class="fas fa-angle-down" onclick="dropCour()"></button>
+			<ul style="display:none;" id="cours">
+				<li>Algèbre Linéaire<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
+				<li>Calculus 1<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+				<li>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+			</ul>
+		</li>
+	</div>
+	<div class="col-12 col-md-8">
+		<h2 class="display-5">Search<span id="par">Paramether</span></h2>
+		<div class="d-flex flex-row flex-wrap justify-content-left">
+			<div class="card book disponible papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
+				<p class="card-text">disponible<br>papier</p>
+				</div>
+			</div>
+			<div class="card book disponible">
+				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<div class="card-body">
+				<h3 class="card-title">Book 1</h3>
+				<p class="card-text">disponible</p>
+				</div>
+			</div>
+			<div class="card book disponible papier">
+				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<div class="card-body">
+				<h3 class="card-title">Book 1</h3>
+				<p class="card-text">disponible<br>papier</p>
+				</div>
+			</div>
+			<div class="card book disponible">
+				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<div class="card-body">
+				<h3 class="card-title">Book 1</h3>
+				<p class="card-text">disponible</p>
+				</div>
+			</div>
+			<div class="card book papier">
+				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<div class="card-body">
+				<h3 class="card-title">Book 1</h3>
+				<p class="card-text">Description<br>papier</p>
+				</div>
+			</div>
+			<div class="card book papier">
+				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<div class="card-body">
+				<h3 class="card-title">Book 1</h3>
+				<p class="card-text">Description<br>papier</p>
 				</div>
 			</div>
 			<div class="card book">
@@ -62,13 +126,6 @@
 				</div>
 			</div>
 			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book d-none d-md-block">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
@@ -76,44 +133,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<section class="mt-3">
-		<h2 class="display-5">Psychologie&nbsp;<i class="fas fa-angle-right"></i></h2>
-		<div class="d-flex flex-row justify-content-center">
-			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book d-none d-md-block">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<script src="javascript/script.js"></script>
+	</div>
+</section>
 </body>
-	<div class="bottom container" >
+	<div class="bottom container-fluid" >
 	<div class="row">
     <div class="col-sm">
       <p><a href="#">Politiques</a></p>
