@@ -16,21 +16,20 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
-	<a class="navbar-brand" href="#">Logo</a>
+	<a class="navbar-brand" href="#">Freebrary</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    	<li class="nav-item"><a class="nav-link" href="#">Sujet</a></li>
-    	<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
+        	<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
     		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          		<a class="dropdown-item" href="#">1</a>
-          		<a class="dropdown-item" href="#">2</a>
+          		<a class="dropdown-item" href="#">Psychologie</a>
+          		<a class="dropdown-item" href="#">Mathematique</a>
           		<div class="dropdown-divider"></div>
-          		<a class="dropdown-item" href="#">something else here</a>
+          		<a class="dropdown-item" href="#">Livres Populaires</a>
+          		<a class="dropdown-item" href="#">Nouvelle addition</a>
         	</div>
-        <li class="nav-item"><a class="nav-link" href="#"><abbr title="premier">1<sup>er</sup></abbr>&nbsp;Cycle</a></li>
 	</ul>
 <ul class="nav navbar-nav navbar-right">
 	<li>
@@ -44,9 +43,9 @@
   </div>
 </nav>
 
-<body class="container margin-top">
+<body class="container-fluid margin-top">
 	<section>
-		<h2 class="display-5">Livres Populaires&nbsp;<i class="fas fa-angle-right"></i></h2>
+		<h2 class="container display-5">Livres Populaires&nbsp;<i class="fas fa-angle-right"></i></h2>
 		<div class="d-flex flex-row justify-content-center">
 			<div class="card book">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
@@ -112,26 +111,18 @@
 			</div>
 		</div>
 	</section>
-	
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCryRAmgVbFuefgY6nS0oqAr1B2jpor-JA",
-    authDomain: "freebrary-8f1c4.firebaseapp.com",
-    databaseURL: "https://freebrary-8f1c4.firebaseio.com",
-    projectId: "freebrary-8f1c4",
-    storageBucket: "",
-    messagingSenderId: "297160213562",
-    appId: "1:297160213562:web:96bb2ec02d278054"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
 </body>
+	<div class="bottom container" >
+	<div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+	</div>
 </html>

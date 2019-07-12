@@ -26,3 +26,15 @@
 }
 
 .inline{display:inline;}
+
+.bottom{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-width: 2px 0 0 0;
+	border-color:#373737;
+	border-style: solid;
+
+}
