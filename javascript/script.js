@@ -11,7 +11,7 @@ function dropCour() {
     coursDropdown.classList.remove("fa-angle-down");
     coursDropdown.className += " fa-angle-right";
   }
-  
+
   var x = document.getElementById("cours");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -198,6 +198,12 @@ function select(bookId){
     localStorage.setItem("class",myBook[3]);
     localStorage.setItem("description",myBook[4]);
     localStorage.setItem("image",myBook[5]);
+}
+
+//Utilise dans mathematique.html et psychologie.html pour ouvrir les pages de livres
+function redirect(bookId){
+  select(bookId);
+  window.location.href = "book.html";
 }
 
 //just a test function to see if I can find the picked book with my set of books
