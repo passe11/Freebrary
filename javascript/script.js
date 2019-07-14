@@ -108,9 +108,59 @@ $('#login').css('display', 'inline-block');
 
 //var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
 
+let id1= {
+  bookName:'Pascalus Calculus',
+  author: 'Millie Bobby Brown',
+  disponible: 11,
+  class: 'Mat1741',
+  description:'description1'
+};
+let id2= {
+  bookName:'Free Bobby',
+  author: 'author2',
+  disponible: 11,
+  class: 'Mat1741',
+  description:'description2'
+};
+let id3= {
+  bookName:'Hola',
+  author: 'author3',
+  disponible: 11,
+  class: 'Mat1741',
+  description:'description3'
+};
+let id4= {
+  bookName:'eh eh',
+  author: 'author4',
+  disponible: 11,
+  class: 'Mat1741',
+  description:'description4'
+};
+let id5= {
+  bookName:'Pascalus Calculus',
+  author: 'Millie Bobby Brown',
+  disponible: 11,
+  class: 'Mat1741',
+  description:'description5'
+};
+
+/*function test(bookname){
+  Object.values(bookname).forEach(item => {
+  alert(item);
+});
+}*/
+
+function select(bookId){
+  var myBook = Object.values(bookId);
+    localStorage.setItem("name",myBook[0]);
+    localStorage.setItem("author",myBook[1]);
+    localStorage.setItem("disponible",myBook[2]);
+    localStorage.setItem("class",myBook[3]);
+    localStorage.setItem("description",myBook[4]);
+}
 
 //just a test function to see if I can find the picked book with my set of books
-function test(bookName){
+/*function select(bookName){
   alert(bookName);
  var books = new Array ( );
 books[0] = new Array ( "Pascal", "author", "ect." );
@@ -123,7 +173,7 @@ for(i=0;i<books.length;i++){
     localStorage.setItem("ect",books[i][2]);
   }
 }
-}
+}*/
 
 //Function called when user wants to login - Will eventually test email address and password
 function login(){

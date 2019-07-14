@@ -23,7 +23,7 @@
 	<!--Include script loads common html components-->
 	<script src="javascript/includes.js"></script>
 </head>
-<body class="container-fluid margin-top">
+<body class="container margin-top">
 <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
   <a class="navbar-brand" href="index.html">Freebrary</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,75 +64,19 @@
 </nav>
 
 	<section>
-		<h2 class="display-5">Livres Populaires&nbsp;<i class="fas fa-angle-right"></i></h2>
-		<div class="d-flex flex-row justify-content-center">
-			<div id="Pascalus Calculus" class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<a onclick="select(id1)" href="book.html"><h3 class="card-title">Pascalus Calculus</h3></a>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<a onclick="select(id2)" href="book.html"><h3 class="card-title">Free Bobby</h3></a>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<a onclick="select(id3)" href="book.html"><h3 class="card-title">hola</h3></a>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book d-none d-md-block">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<a onclick="select(id4)" href="book.html"><h3 class="card-title">eh eh</h3></a>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="mt-3">
-		<h2 class="display-5">Mathématique&nbsp;<i class="fas fa-angle-right"></i></h2>
-		<div class="d-flex flex-row justify-content-center">
-			<div id="Quand les droites deviennent courbes : les géométries non-euclidiennes" class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Quand les droites deviennent courbe</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div id="La Secte des nombre : le théorème de Pythagore" class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Secte des nombre&nbsp;: le théorème de pythago...</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div id="Mathématiques, espionnage et piratage informatique" class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Mathématiques, espionnage et piratage...</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-			<div class="card book d-none d-md-block">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
-				</div>
-			</div>
-		</div>
+<h2>Réservation</h2>
+<div id="loader" class="d-flex flex-row flex-wrap justify-content-left">
+	
+</div>
 	</section>
 	<!--This is are global script-->
 	<!--Load script at the end of body for better loading efficiency-->
 	<script src="javascript/script.js"></script>
+	<script>
+		$( document ).ready(function() {
+    document.getElementById("loader").innerHTML=localStorage.getItem("reservation");
+});
+	</script>
 </body>
 	<div id="foot"></div>
 </html>
