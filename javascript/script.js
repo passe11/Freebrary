@@ -14,10 +14,10 @@ function dropCour() {
 function disponible() {
   if(find.includes("disponible")){
   find = find.replace("disponible","")
-  search(find);
+  filter(find);
 }else{
 find+="disponible ";
-search(find);
+filter(find);
 }
 }
 
@@ -41,14 +41,14 @@ for(i=0;i<hide.length;i++){
 function papier() {
   if(find.includes("papier")){
   find = find.replace("papier","")
-  search(find);
+  filter(find);
 }else{
 find+="papier ";
-search(find);
+filter(find);
 }
 }  
 
-function search(y){
+function filter(y){
 const selected = Array.from(document.getElementsByClassName(y));
   const books= Array.from(document.getElementsByClassName("book"));
  if(selected.length>0){

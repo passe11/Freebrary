@@ -9,21 +9,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/649b675417.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="javascript/search.js"></script>
-	</script>
+
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<!--Include script loads common html components-->
-	<script src="javascript/includes.js"></script>
+	
 	<!--add jquery-->
 	<script
 			  src="https://code.jquery.com/jquery-3.4.1.js"
 			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			  crossorigin="anonymous"></script>
 </head>
-<div id="nav"></div>
+<nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+  <a class="navbar-brand" href="index.html">Freebrary</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
+              <a class="dropdown-item" href="Mathematique.html">Mathematique</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Livres Populaires</a>
+              <a class="dropdown-item" href="#">Nouvelle addition</a>
+          </div>
+        </li>
+  </ul>
+<ul class="nav navbar-nav navbar-right">
+  <li>
+    <form id="myform" action="search.html" class="form-inline">
+    <button type="submit" value="submit" class="transparent fas fa-search" ></button>
+    <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </form>
+</li>
+    <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button>login</button></a></li>
+    <li id="compte"><div class="dropdown transparent">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user"></i>&nbsp;Mon compte
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">My reservations</a>
+    <a class="dropdown-item" href="#">Account details</a>
+    <a onclick="logout()" class="dropdown-item" href="#">logout</a>
+  </div>
+</div></li>
+  </ul>
+  </div>
+</nav>
 <!-- loads the search() function on load. The search function will remove any book that does not match the search criteria in localstorage-->
 <body onload="search()" class="container-fluid margin-top">
 <section class="row">
@@ -43,10 +80,10 @@
 	<div class="col-12 col-md-8">
 		<h2 class="display-5">Search&nbsp;&ndash;&nbsp;<span id="par">Paramether</span></h2>
 		<div class="d-flex flex-row flex-wrap justify-content-left">
-			<div id="Calculus" class="card book disponible papier">
+			<div id="Calculus" class="card disponible book papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title">Calculus pour pro</h3>
 				<p class="card-text">disponible<br>papier</p>
 				</div>
 			</div>
@@ -57,42 +94,42 @@
 				<p class="card-text">disponible</p>
 				</div>
 			</div>
-			<div class="card book disponible papier">
+			<div id="bob" class="card book disponible papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title">Bob</h3>
 				<p class="card-text">disponible<br>papier</p>
 				</div>
 			</div>
-			<div class="card book disponible">
+			<div id="hi" class="card book disponible">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
 				<p class="card-text">disponible</p>
 				</div>
 			</div>
-			<div class="card book papier">
+			<div id="hi" class="card book papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
 				<p class="card-text">Description<br>papier</p>
 				</div>
 			</div>
-			<div class="card book papier">
+			<div id="lol" class="card book papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
 				<p class="card-text">Description<br>papier</p>
 				</div>
 			</div>
-			<div class="card book">
+			<div id="gotchu" class="card book">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
 				<p class="card-text">Description blabla blaba</p>
 				</div>
 			</div>
-			<div class="card book">
+			<div id="Calculus" class="card book">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Book 1</h3>
@@ -105,6 +142,8 @@
 	<script >
 		document.getElementById("par").innerHTML = localStorage.getItem("search");
 	</script>
+	<script src="javascript/script.js"></script>
+		<script src="javascript/search.js"></script>
 </body>
 <div class="bottom container">
 	<div class="row">
