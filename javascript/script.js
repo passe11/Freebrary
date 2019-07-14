@@ -117,28 +117,28 @@ let id1= {
   image:'images/book-black.png'
 };
 let id2= {
-  bookName:'Free Bobby',
-  author: 'author2',
+  bookName:'Mécanique pour ingénieurs, 3e éd.',
+  author: 'Ferdinand P. Beer, E. Russell Johnston Jr., David F. Mazurek',
   disponible: 11,
-  class: 'Mat1741',
-  description:'description2',
-  image:'images/book-black.png'
+  class: 'GNG 1505, GNG 1105',
+  description:'Mécanique pour ingénieurs, 3e édition accompagne les étudiants de premier cycle universitaire en génie ainsi que leurs professeurs dans les cours de statique (volume 1) et de dynamique (volume 2)',
+  image:'images/mecanique.jpg'
 };
 let id3= {
-  bookName:'Hola',
-  author: 'author3',
+  bookName:'Calcul différentiel (I)',
+  author: 'James Stewart',
   disponible: 11,
-  class: 'Mat1741',
-  description:'description3',
-  image:'images/book-black.png'
+  class: 'MAT 1720, MAT 1320',
+  description:'Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathématique. Une approche des mathématiques basée sur une méthode de résolution de problèmes favorisant une meilleure intégration des concepts.',
+  image:'images/calcul1.jpg'
 };
 let id4= {
-  bookName:'eh eh',
-  author: 'author4',
+  bookName:'Apprendre à programmer avec Python 3',
+  author: 'Gérard Swinnen',
   disponible: 11,
-  class: 'Mat1741',
-  description:'description4',
-  image:'images/book-black.png'
+  class: 'ITI 1120, ITI 1520',
+  description:'Un livre incontournable pour acquérir l&apos;exigeante discipline qu&apos;est l&apos;art de la programmation ! Original et stimulant, cet ouvrage aborde au travers d&apos;exemples attrayants et concrets tous les fondamentaux de la programmation.',
+  image:'images/programming.jpg'
 };
 let id5= {
   bookName:'Pascalus Calculus',
