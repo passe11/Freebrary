@@ -109,17 +109,17 @@ $('#login').css('display', 'inline-block');
 //var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
 
 let id1= {
-  bookName:'Pascalus Calculus',
-  author: 'Millie Bobby Brown',
-  disponible: 11,
-  class: 'Mat1741',
-  description:'description1',
-  image:'images/book-black.png'
+  bookName:'Chimie Organique',
+  author: 'Graham Solomon, Craig Fryhle',
+  disponible: 9,
+  class: 'CHM 1721',
+  description:'La matière est présentée de façon simple et stimulante, et l&apos;accent est mis sur les habiletés essentielles à la réussite en chimie organique : résolution de problèmes, visualisation des structures et compréhension des mécanismes.',
+  image:'images/chimie.jpg'
 };
 let id2= {
   bookName:'Mécanique pour ingénieurs, 3e éd.',
   author: 'Ferdinand P. Beer, E. Russell Johnston Jr., David F. Mazurek',
-  disponible: 11,
+  disponible: 18,
   class: 'GNG 1505, GNG 1105',
   description:'Mécanique pour ingénieurs, 3e édition accompagne les étudiants de premier cycle universitaire en génie ainsi que leurs professeurs dans les cours de statique (volume 1) et de dynamique (volume 2)',
   image:'images/mecanique.jpg'
@@ -127,7 +127,7 @@ let id2= {
 let id3= {
   bookName:'Calcul différentiel (I)',
   author: 'James Stewart',
-  disponible: 11,
+  disponible: 15,
   class: 'MAT 1720, MAT 1320',
   description:'Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathématique. Une approche des mathématiques basée sur une méthode de résolution de problèmes favorisant une meilleure intégration des concepts.',
   image:'images/calcul1.jpg'
