@@ -108,6 +108,7 @@ $('#login').css('display', 'inline-block');
 
 //var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
 
+//Livres représentés comme objets JavaScript 
 let id1= {
   bookName:'Chimie Organique',
   author: 'Graham Solomon, Craig Fryhle',
@@ -141,12 +142,36 @@ let id4= {
   image:'images/programming.jpg'
 };
 let id5= {
-  bookName:'Pascalus Calculus',
-  author: 'Millie Bobby Brown',
-  disponible: 11,
-  class: 'Mat1741',
-  description:'description5',
-  image:'images/book-black.png'
+  bookName:'Algèbre linéaire et applications',
+  author: 'David C. Lay, Michel Henri',
+  disponible: 14,
+  class: 'MAT 1741, MAT 1341',
+  description:'Présente les concepts de base de l&apos;algèbre linéaire et les outils dont l&apos;étudiant aura besoin dans sa vie professionnelle. Propose une large sélection d&apos;applications, d&apos;exemples et d&apos;exercices permettant d&apos;aborder les difficultés réelles rencontrées.',
+  image:'images/algebre.jpg'
+};
+let id6= {
+  bookName:'Calcul avancé',
+  author: 'James Stewart',
+  disponible: 14,
+  class: 'MAT 1722, MAT 1322, MAT 2322, MAT 2722, MAT 2322',
+  description:'Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est d&apos;une grande précision mathématique et d&apos;une grande rigueur scientifique et offerte en couleurs pour faciliter la lecture et l&apos;apprentissage des étudiants.',
+  image:'images/calcul3.jpg'
+};
+let id7= {
+  bookName:'Mathématiques discrètes, édition révisée',
+  author: 'Kenneth Rosen',
+  disponible: 13,
+  class: 'MAT 1748',
+  description:'Encensé par les spécialistes de l&apos;informatique, cet ouvrage doit son succès à la clarté de ses exposés, à la diversité de ses exemples et de ses exercices ainsi qu&apos;à la richesse et au nombre des applications qui y sont traitées.',
+  image:'images/discrete.jpg'
+};
+let id8= {
+  bookName:'Caclul intégral II',
+  author: 'James Stewart',
+  disponible: 7,
+  class: 'MAT 1720, MAT 1320, MAT 1722, MAT 1322',
+  description:'En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de James Stewart, elle présente une réorganisation, notamment en ce qui concerne les notions sur les suites et les séries, ainsi que des exercices et des problèmes supplémentaires.',
+  image:'images/calcul2.jpg'
 };
 
 /*function test(bookname){
