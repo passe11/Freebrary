@@ -1,10 +1,12 @@
 $( document ).ready(function() {
     document.getElementById("name").innerHTML=localStorage.getItem("name");
+    document.getElementById("name2").innerHTML=localStorage.getItem("name");
     document.getElementById("author").innerHTML=localStorage.getItem("author");
     document.getElementById("disponible").innerHTML=localStorage.getItem("disponible");
     document.getElementById("cour").innerHTML=localStorage.getItem("class");
     document.getElementById("description").innerHTML=localStorage.getItem("description");
     document.getElementById("bookImage").src=localStorage.getItem("image");
+    document.getElementById("modalImage").src=localStorage.getItem("image");
 });
 
 function reservation(){
