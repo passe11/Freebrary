@@ -75,8 +75,8 @@ Thats why we return true at the end. returning false would block it.
 */
 $('#myform').submit(function() {
   localStorage.setItem("search", document.getElementById("form-field").value);
-  alert(document.getElementById("form-field").value);
-    alert("works") ;   return true; // return false to cancel form action
+  //alert(document.getElementById("form-field").value);
+   // alert("works") ;   return true; // return false to cancel form action
 });
 
 $('#login').submit(function() {
@@ -85,7 +85,7 @@ $('#login').submit(function() {
   alert(email);
   var password= document.getElementById("passwordinput").value;
   if(email==="pmarl012@uottawa.ca"){
-    alert("pascal");
+    //alert("pascal");
     localStorage.setItem("user","pascal");
   }
   });
@@ -113,35 +113,40 @@ let id1= {
   author: 'Millie Bobby Brown',
   disponible: 11,
   class: 'Mat1741',
-  description:'description1'
+  description:'description1',
+  image:'images/book-black.png'
 };
 let id2= {
   bookName:'Free Bobby',
   author: 'author2',
   disponible: 11,
   class: 'Mat1741',
-  description:'description2'
+  description:'description2',
+  image:'images/book-black.png'
 };
 let id3= {
   bookName:'Hola',
   author: 'author3',
   disponible: 11,
   class: 'Mat1741',
-  description:'description3'
+  description:'description3',
+  image:'images/book-black.png'
 };
 let id4= {
   bookName:'eh eh',
   author: 'author4',
   disponible: 11,
   class: 'Mat1741',
-  description:'description4'
+  description:'description4',
+  image:'images/book-black.png'
 };
 let id5= {
   bookName:'Pascalus Calculus',
   author: 'Millie Bobby Brown',
   disponible: 11,
   class: 'Mat1741',
-  description:'description5'
+  description:'description5',
+  image:'images/book-black.png'
 };
 
 /*function test(bookname){
@@ -157,6 +162,7 @@ function select(bookId){
     localStorage.setItem("disponible",myBook[2]);
     localStorage.setItem("class",myBook[3]);
     localStorage.setItem("description",myBook[4]);
+    localStorage.setItem("image",myBook[5]);
 }
 
 //just a test function to see if I can find the picked book with my set of books
@@ -182,7 +188,7 @@ function login(){
   alert(email);
   var password= document.getElementById("passwordinput").value;
   if(email==="pmarl012@uottawa.ca"){
-    alert("pascal");
+    //alert("pascal");
     localStorage.setItem("user","pascal");
   }
 }

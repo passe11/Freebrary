@@ -4,6 +4,7 @@ $( document ).ready(function() {
     document.getElementById("disponible").innerHTML=localStorage.getItem("disponible");
     document.getElementById("cour").innerHTML=localStorage.getItem("class");
     document.getElementById("description").innerHTML=localStorage.getItem("description");
+    document.getElementById("bookImage").src=localStorage.getItem("image");
 });
 
 function reservation(){
@@ -14,10 +15,14 @@ function reservation(){
 		var books = [];
 	}
 book.push(localStorage.getItem("name"));
-book.push(localStorage.getItem("disponible"));
+book.push(localStorage.getItem("image"));
+book.push(getSelected());
 books.push(book);
  localStorage.setItem("reservation",JSON.stringify(books));
  alert(JSON.stringify(books));
 //JSON.stringify(names)
 //JSON.parse(localStorage.getItem("names")
+}
+function getSelected(){
+return($('#emprunt :selected').text());
 }

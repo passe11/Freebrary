@@ -64,19 +64,15 @@
 </nav>
 
 	<section>
-<h2>Réservation</h2>
+<h2>Mes réservations</h2>
 <div id="loader" class="d-flex flex-row flex-wrap justify-content-left">
-	
+	<p> Aucune réservation</p>
 </div>
 	</section>
 	<!--This is are global script-->
 	<!--Load script at the end of body for better loading efficiency-->
 	<script src="javascript/script.js"></script>
-	<script>
-		$( document ).ready(function() {
-    document.getElementById("loader").innerHTML=localStorage.getItem("reservation");
-});
-	</script>
+	<script src="javascript/reservation.js"></script>
 </body>
 	<div id="foot"></div>
 </html>
