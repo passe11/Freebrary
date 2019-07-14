@@ -78,3 +78,73 @@ $('#myform').submit(function() {
   alert(document.getElementById("form-field").value);
     alert("works") ;   return true; // return false to cancel form action
 });
+
+$('#login').submit(function() {
+  alert("test1");
+  var email = document.getElementById("emailinput").value;
+  alert(email);
+  var password= document.getElementById("passwordinput").value;
+  if(email==="pmarl012@uottawa.ca"){
+    alert("pascal");
+    localStorage.setItem("user","pascal");
+  }
+  });
+
+$(function() {
+  if(localStorage.getItem("user")===""){
+$('#compte').css('display', 'none');
+$('#login').css('display', 'inline-block');  
+  }else{
+$('#compte').css('display', 'inline-block');
+$('#login').css('display', 'none');  
+  }
+});
+
+function logout(){
+localStorage.setItem("user","");
+$('#compte').css('display', 'none');
+$('#login').css('display', 'inline-block');
+}
+
+//var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
+
+
+//just a test function to see if I can find the picked book with my set of books
+function test(bookName){
+  alert(bookName);
+ var books = new Array ( );
+books[0] = new Array ( "Pascal", "author", "ect." );
+books[1] = new Array ( "Tired of being tired", "Pascal", "ect." );
+for(i=0;i<books.length;i++){
+  if(books[i][0]===bookName){
+    alert(books[i][0]+books[i][1]+books[i][2]);
+    localStorage.setItem("name",books[i][0]);
+    localStorage.setItem("author",books[i][1]);
+    localStorage.setItem("ect",books[i][2]);
+  }
+}
+}
+
+//Function called when user wants to login - Will eventually test email address and password
+function login(){
+  alert("test");
+  var email = document.getElementById("emailinput").value;
+  alert(email);
+  var password= document.getElementById("passwordinput").value;
+  if(email==="pmarl012@uottawa.ca"){
+    alert("pascal");
+    localStorage.setItem("user","pascal");
+  }
+}
+
+
+//Checks if the user is login or not
+function booking(){
+  if(localStorage.getItem("user")===""){
+    //not loged in make him log in
+$('#bookingButton').attr('data-target','#loginModal');  
+  }else{
+    //loged in give him the chance to make his reservation
+$('#bookingButton').attr('data-target','#myModal');  
+  }
+}
