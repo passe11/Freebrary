@@ -54,7 +54,7 @@
     <i class="fas fa-user"></i>&nbsp;Mon compte
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">My reservations</a>
+    <a class="dropdown-item" href="reservation.html">Mes emprunts</a>
     <a class="dropdown-item" href="#">Account details</a>
     <a onclick="logout()" class="dropdown-item" href="#">logout</a>
   </div>
@@ -71,16 +71,18 @@
 					<img class="img-fluid" src="images/book-black.png"  alt="Book">
 				</div>
 				<div class="col-6">	
-					<h2>Book name</h2>
+					<h2 id="name">Book name</h2>
+					<p>par: <span id="author"></span></p>
+					<p>cour: <span id="cour"></span></p>
+					<p id="description">description</p>
 				</div>
-				<p>description</p>
 		</div>
 	</div>
 </div>
 		<div class="col-4">
 			<div class="card text-white bg-dark mb-3">
 				<div class="card-body">
-			<p class="card-title"><span class="available">x</span>&nbsp;copies disponible</p>
+			<p class="card-title"><span id="disponible">x</span>&nbsp;copies disponible</p>
 			<p class="card-text">à la bibliothèque Morisette</p>
 			<button id="bookingButton" onClick="booking()" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Réserver</button>
 <div class="modal text-dark" id="myModal">
@@ -100,10 +102,21 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-      	<button type="button" class="btn" data-dismiss="modal">Réserver</button>
+      	<button onclick="reservation()" type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#confirmation">Réserver</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Anuler</button>
       </div>
 
+    </div>
+  </div>
+</div>
+<div class="modal text-dark" id="confirmation">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+      	<p>Bravo reservation avec succes</p>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
     </div>
   </div>
 </div>
@@ -141,6 +154,8 @@
 	<!--This is are global script-->
 	<!--Load script at the end of body for better loading efficiency-->
 	<script src="javascript/script.js"></script>
+
+	<script src="javascript/book.js"></script>
 	<script>
 		    $('#login').submit(function() {
   alert("test1");
