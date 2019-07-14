@@ -2,6 +2,16 @@ var find="";
 
 //This displays the dropdown menu with available class filters
 function dropCour() {
+  //assurer que la fleche s'ajuste
+  var coursDropdown = document.getElementById("cours-dropdown");
+  if(coursDropdown.classList.contains("fa-angle-right")){
+    coursDropdown.classList.remove("fa-angle-right");
+    coursDropdown.className += " fa-angle-down";
+  } else {
+    coursDropdown.classList.remove("fa-angle-down");
+    coursDropdown.className += " fa-angle-right";
+  }
+  
   var x = document.getElementById("cours");
   if (x.style.display === "none") {
     x.style.display = "block";

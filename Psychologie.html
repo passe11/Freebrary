@@ -30,11 +30,11 @@
     <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
+              <a class="dropdown-item" href="Psychologie.html"><b>Psychologie</b></a>
               <a class="dropdown-item" href="Mathematique.html">Mathematique</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Livres Populaires</a>
-              <a class="dropdown-item" href="#">Nouvelle addition</a>
+              <a class="dropdown-item" href="#">Nouvelles additions</a>
           </div>
         </li>
   </ul>
@@ -67,11 +67,11 @@
 		<li>Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></li>
 		<li>Livre numérique&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></li>
 		<li>Livre papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></li>
-		<li>Cours&nbsp;<button class="fas fa-angle-down" onclick="dropCour()"></button>
+		<li>Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right" onclick="dropCour()"></button>
 			<ul style="display:none;" id="cours">
-				<li>Algèbre Linéaire<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
-				<li>Calculus 1<button class="fas fa-angle-right " onclick="disponible()"></button></li>
-				<li>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+				<li>Intro. à la psychologie<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
+				<li>Développement de l'enfant<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+				<li>Psychologie sociale <button class="fas fa-angle-right " onclick="disponible()"></button></li>
 			</ul>
 		</li>
 	</ul>
@@ -80,59 +80,59 @@
 		<h2 class="display-5">Psychologie</h2>
 		<div class="d-flex flex-row flex-wrap justify-content-left">
 			<div class="card book disponible papier">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/psychologie.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size:22px">Psychologie 11e éd.</h3>
 				<p class="card-text">disponible<br>papier</p>
 				</div>
 			</div>
 			<div class="card book disponible">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/psychologie10.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size:22px">Psychologie 10e éd.</h3>
 				<p class="card-text">disponible</p>
 				</div>
 			</div>
 			<div class="card book disponible papier">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/psychologie9.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size:22px">Psychologie 9e éd.</h3>
 				<p class="card-text">disponible<br>papier</p>
 				</div>
 			</div>
 			<div class="card book disponible">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/psychologie8.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size:22px">Psychologie 8e éd.</h3>
 				<p class="card-text">disponible</p>
 				</div>
 			</div>
 			<div class="card book papier">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/ages.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size:25px">Les âges de la vie</h3>
 				<p class="card-text">Description<br>papier</p>
 				</div>
 			</div>
 			<div class="card book papier">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/papalie.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
+				<h3 class="card-title" style="font-size: 16.5px">Psychologie du développement humain</h3>
 				<p class="card-text">Description<br>papier</p>
 				</div>
 			</div>
 			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/gaetan.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
+				<h3 class="card-title" style="font-size: 17px">Psychologie du travail et comportement organisationnel</h3>
+				<p class="card-text">Non disponible</p>
 				</div>
 			</div>
 			<div class="card book">
-				<img class="card-img-top" src="images/book-black.png"  alt="Book">
+				<img class="card-img-top" src="images/sociale.jpg"  alt="Book">
 				<div class="card-body">
-				<h3 class="card-title">Book 1</h3>
-				<p class="card-text">Description blabla blaba</p>
+				<h3 class="card-title" style="font-size: 20px">Introduction à la psychologie sociale</h3>
+				<p class="card-text">Non disponible</p>
 				</div>
 			</div>
 		</div>
