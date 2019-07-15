@@ -2,7 +2,7 @@
     --primary-color: #356859;
     --secondary-color: #fd5523;
     --background-color: #FFFBE6;
-    --foreground-color: #FFFBE6;
+    --foreground-color: #F2EDD0;
     --highlight-color: #B9E4C9;
 }
 
@@ -10,4 +10,39 @@ html, body {
     font-family: 'Rubik', "Helvetica", sans-serif;
     color: var(--primary-color);
     background-color: var(--background-color);
+    margin-top: 40px;
+}
+
+.primary-text {
+    color: var(--primary-color) !important;
+}
+
+.secondary-text {
+    color: var(--secondary-color) !important;
+}
+
+footer {
+    padding: 20px;
+    width: 100%;
+    background-color: var(--foreground-color);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.navbar {
+    background-color: var(--foreground-color);
+}
+
+.book{
+	max-width: 20%;
+	min-width: 200px;
+	margin:15px;
+}
+
+.fas {
+	color: var(--primary-color);
+	background-color: transparent;
+	border-color: transparent;
 }
