@@ -13,6 +13,9 @@ $( document ).ready(function() {
     if(disponible==0){
         document.getElementById("bookingButton").style.display="none";
         document.getElementById("waitListButton").style.display="inline-block";
+    }else{
+        document.getElementById("bookingButton").style.display="inline-block";
+        document.getElementById("waitListButton").style.display="none";
     }
 });
 
