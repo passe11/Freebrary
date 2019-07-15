@@ -66,17 +66,17 @@
   </div>
 </nav>
 <body class="container-fluid margin-top">
-<section class="row">
-	<div class="col-12 col-md-3">
-		<ul>
-		<li>Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></li>
-		<li>Livre numérique&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></li>
-		<li>Livre papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></li>
-		<li>Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right" onclick="dropCour()"></button>
-			<ul style="display:none;" id="cours">
+<section class="row">	
+	<div class="col-12 col-md-3 justify-content-center">
+		<ul class="optionlist">
+		<li ><span class="option">Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></span></li>
+		<li ><span class="option">Livre numérique&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></span></li>
+		<li ><span class="option">Livre papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></span></li>
+		<li ><span id="cour" class="option">Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right" onclick="dropCour()"></button></span>
+			<ul class="optionDropdown" style="display:none;" id="cours">
 				<li>Algèbre Linéaire<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
 				<li>Calculus 1<button class="fas fa-angle-right " onclick="disponible()"></button></li>
-				<li>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+				<li><span>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></span></li>
 			</ul>
 		</li>
 	</div>
