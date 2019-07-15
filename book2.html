@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fontawesome has bunch of icons-->
+    <script src="https://kit.fontawesome.com/649b675417.js"></script>
+    <!--add jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--Bootstrap CND-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Global stylesheet-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <link href="styles2.css" rel="stylesheet" type="text/css">
+    <!--Include script loads common html components-->
+    <script src="javascript/includes.js"></script>
+</head>
+
+<body class="container margin-top">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg">
+        <a class="navbar-brand primary-text" href="book2.html">Freebrary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle primary-text" href="#"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Collections</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
+                        <a class="dropdown-item" href="Mathematique.html">Mathematique</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Livres Populaires</a>
+                        <a class="dropdown-item" href="#">Nouvelles additions</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form id="myform" action="search.html" class="form-inline">
+                        <button type="submit" value="submit" class="transparent fas fa-search"></button>
+                        <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                    </form>
+                </li>
+                <li id="login" class="nav-item"><a href="login.html" class="nav-link"
+                        href="#"><button>login</button></a></li>
+                <li id="compte">
+                    <div class="dropdown transparent">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>&nbsp;Mon compte
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">My reservations</a>
+                            <a class="dropdown-item" href="#">Account details</a>
+                            <a onclick="logout()" class="dropdown-item" href="#">logout</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="row">
+        <div class="col-lg-8 col-sm-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-3 col-sm-12">
+                        <img id="bookImage" class="img-fluid" src="images/book-black.png" alt="Book">
+                    </div>
+                    <div class="col-lg-6 col-md-9 col-sm-12">
+                        <h2 id="name">Book name</h2>
+                        <p><strong>Autheur(s):</strong> <span id="author"></span></p>
+                        <p><strong>Cours associés:</strong> <span id="cour"></span></p>
+                        <p><strong>Description:</strong></p>
+                        <p id="description" style="font-style:oblique">description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="card text-white highlight mb-3">
+                    <div class="card-body">
+                        <p class="card-title"><span id="disponible">x</span>&nbsp;copie(s) disponible(s)</p>
+                        <p class="card-text">à la bibliothèque Morisset (65 University Private, Ottawa, ON K1N 6N5)</p>
+                        <button id="bookingButton" onClick="booking()" type="button" class="btn secondary-highlight"
+                            data-toggle="modal" data-target="#myModal">Réserver</button>
+                        <div class="modal text-dark" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 id="name2" class="modal-title">Book1</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <img id="modalImage" class="img-fluid" src="images/book-black.png"
+                                            style="height: 300px; width: 250px" alt="Book">
+                                        <hr>
+                                        <p>Date du début de l'emprunt</p><input type="date" name="Date emprunt"
+                                            min="2019-07-18">
+                                        <p>Période d'emprunt</p>
+                                        <select id="emprunt" class="custom-select custom-select-sm">
+                                            <option>1 semaine (7 jours)</option>
+                                            <option>2 semaines (14 jours)</option>
+                                            <option>3 semaines (21 jours)</option>
+                                            <option>1 mois (30 jours)</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button onclick="reservation()" type="button" class="btn" data-dismiss="modal"
+                                            data-toggle="modal" data-target="#confirmation">Réserver</button>
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Anuler</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal text-dark" id="confirmation">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <p>Bravo reservation avec succes</p>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal text-dark" id="loginModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Please login</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form action="book.html" id="login">
+                                            <div class="form-group">
+                                                <label for="emailinput">Email address</label>
+                                                <input type="email" class="form-control" id="emailinput"
+                                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="passwordinput">Password</label>
+                                                <input type="password" class="form-control" id="passwordinput"
+                                                    placeholder="Password">
+                                            </div>
+                                            <button onclick="login()" type="submit" value="submit"
+                                                class="btn btn-primary">Sign in</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--This is are global script-->
+    <!--Load script at the end of body for better loading efficiency-->
+    <script src="javascript/script.js"></script>
+
+    <script src="javascript/book.js"></script>
+    <script>
+        $('#login').submit(function () {
+            alert("test1");
+            var email = document.getElementById("emailinput").value;
+            alert(email);
+            var password = document.getElementById("passwordinput").value;
+            if (email === "pmarl012@uottawa.ca") {
+                alert("pascal");
+                localStorage.setItem("user", "pascal");
+            }
+        });
+    </script>
+</body>
+<div class="bottom container">
+    <div class="row">
+        <div class="col-sm">
+            <p><a href="#">Politiques</a></p>
+            <p><a href="#">Accessibilité</a></p>
+            <p><a href="#">Droit d'auteur</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a href="#">Freebrary en bref</a></p>
+            <p><a href="#">Nous contacter</a></p>
+            <p><a href="#">Période d'emprunt et frais</a></p>
+        </div>
+        <div class="col-sm">
+            <p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
+            <p>(613) 562-5213
+        </div>
+    </div>
+    
+</div>
+
+<!--This is are global script-->
+<!--Load script at the end of body for better loading efficiency-->
+<script src="javascript/script.js"></script>
+</body>
+
+
+</html>

@@ -3,7 +3,7 @@
     --secondary-color: #fd5523;
     --background-color: #FFFBE6;
     --foreground-color: #F2EDD0;
-    --highlight-color: #B9E4C9;
+    --highlight-color: rgba(83, 151, 108, 0.575);
 }
 
 html, body {
@@ -19,6 +19,15 @@ html, body {
 
 .secondary-text {
     color: var(--secondary-color) !important;
+}
+
+.highlight {
+    background-color: var(--highlight-color) !important;
+}
+
+.secondary-highlight {
+    background-color: var(--secondary-color) !important;
+    color: white;
 }
 
 footer {
@@ -46,3 +55,5 @@ a {
 	background-color: transparent;
 	border-color: transparent;
 }
+
+
