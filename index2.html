@@ -1,0 +1,136 @@
+<!Doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Fontawesome has bunch of icons-->
+        <script src="https://kit.fontawesome.com/649b675417.js"></script>
+	    <!--add jquery-->
+	    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script> 
+        <!--Bootstrap CND-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!--Global stylesheet-->
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <link href="styles2.css" rel="stylesheet" type="text/css">        
+        <!--Include script loads common html components-->
+        <script src="javascript/includes.js"></script>        
+    </head>
+    <body class="container-fluid margin-top">
+
+        <nav class="navbar fixed-top navbar-light navbar-expand-lg">
+            <a class="navbar-brand primary-text" href="index2.html">Freebrary</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle primary-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
+                        <a class="dropdown-item" href="Mathematique.html">Mathematique</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Livres Populaires</a>
+                        <a class="dropdown-item" href="#">Nouvelles additions</a>
+                    </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form id="myform" action="search.html" class="form-inline">
+                            <button type="submit" value="submit" class="transparent fas fa-search" ></button>
+                            <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                    <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button>login</button></a></li>
+                    <li id="compte">
+                        <div class="dropdown transparent">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user"></i>&nbsp;Mon compte
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">My reservations</a>
+                                <a class="dropdown-item" href="#">Account details</a>
+                                <a onclick="logout()" class="dropdown-item" href="#">logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>                                
+            </div>
+        </nav>
+
+        <section>
+            <h4 class="display-5">Livres Populaires&nbsp;<i class="fas fa-angle-right"></i></h4>
+            <div class="d-flex flex-row justify-content-center">
+                <div id="Pascalus Calculus" class="card book">
+                    <img class="card-img-top img-fluid" src="images/chimie.jpg"  alt="Book">
+                    <div class="card-body">
+                        <a onclick="select(id1)" href="book.html"><h5 class="card-title secondary-text">Chimie Organique</h5></a>
+                        <p class="card-text"><i>La matière est présentée de façon simple et stimulante, et l'accent est mis sur les...</i></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link secondary-text">Emprunter</a>
+                    </div>
+                </div>
+                <div class="card book">
+                    <img class="card-img-top img-fluid" src="images/mecanique.jpg"  alt="Book">
+                    <div class="card-body">
+                        <a onclick="select(id2)" href="book.html"><h5 class="card-title secondary-text">Mécanique pour ingénieurs, 3<sup>e</sup> éd.</h5></a>
+                        <p class="card-text"><i>Mécanique pour ingénieurs, 3e édition accompagne les étudiants de premier cycle univer...</i></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link secondary-text">Emprunter</a>
+                    </div>
+                </div>
+                <div class="card book">
+                    <img class="card-img-top img-fluid" src="images/calcul1.jpg"  alt="Book">
+                    <div class="card-body">
+                        <a onclick="select(id3)" href="book.html"><h5 class="card-title secondary-text">Calcul différentiel (I)</h5></a>
+                        <p class="card-text"><i>Une présentation claire ainsi qu'un texte concis et rigoureux sur le plan mathématique...</i></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link secondary-text">Emprunter</a>
+                    </div>
+                </div>
+                <div class="card book">
+                    <img class="card-img-top img-fluid" src="images/programming.jpg"  alt="Book">
+                    <div class="card-body">
+                        <a onclick="select(id4)" href="book.html"><h5 class="card-title secondary-text">Apprendre à programmer avec Python 3</h5></a>
+                        <p class="card-text"><i>Original et stimulant, cet ouvrage aborde au travers d'exemples attrayants et concrets...</i></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link secondary-text">Emprunter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--This is are global script-->
+        <!--Load script at the end of body for better loading efficiency-->
+        <script src="javascript/script.js"></script>
+    </body>
+
+    <footer class="container-fluid">
+        <div class="row">
+        <div class="col-sm">
+            <p><a class="primary-text" href="#">Politiques</a></p>
+            <p><a class="primary-text" href="#">Accessibilité</a></p>
+            <p><a class="primary-text" href="#">Droit d'auteur</a></p>
+        </div>
+        <div class="col-sm">
+            <p><a class="primary-text" href="#">Freebrary en bref</a></p>
+            <p><a class="primary-text" href="#">Nous contacter</a></p>
+            <p><a class="primary-text" href="#">Période d'emprunt et frais</a></p>
+        </div>
+        <div class="col-sm">
+            <p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
+            <p>(613) 562-5213
+        </div>
+        </div>
+    </footer>
+
+</html>
