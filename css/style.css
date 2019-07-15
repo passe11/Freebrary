@@ -8,7 +8,6 @@
 	padding-top:0.5em;
 }
 .fas{
-	color: grey!important;
 	background-color: transparent !important;
 	border-color: transparent !important;
 }
@@ -16,9 +15,24 @@
 	margin-top:80px;
 }
 .book{
+	background-color:#f4f4f4!important;
 	max-width: 20%;
 	min-width: 150px;
 	margin:15px;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+  .book {
+    max-width: 33%!important;
+
+  }
+}
+@media only screen and (max-width: 500px) {
+  .book {
+    max-width: 45%!important;
+    margin:5px;
+
+  }
 }
 .shelf{
 	display:flex;
@@ -32,9 +46,7 @@
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	font-weight: lighter;
-	letter-spacing: 2px;
-	border-width: 2px 0 0 0;
+	border-width: 1px 0 0 0;
 	border-color:#373737;
 	border-style: solid;
 
