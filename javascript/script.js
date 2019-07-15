@@ -64,7 +64,31 @@ var id8= {
   description:'En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de James Stewart, elle présente une réorganisation, notamment en ce qui concerne les notions sur les suites et les séries, ainsi que des exercices et des problèmes supplémentaires.',
   image:'images/calcul2.jpg'
 };
-var bookShelf= [id1,id2,id3,id4,id5,id6,id7,id8];
+var id9= {
+  bookName:'Calcul à plusieurs variables',
+  author: 'James Stewart, Jean Guérin',
+  disponible: 8,
+  class: 'MAT 1720, MAT 1320, MAT 1722, MAT 1322',
+  description:'L’art d’enseigner, disait l’écrivain Mark Van Doren, est l’art d’aider à découvrir. Et on peut dire que James Stewart possédait cet art. Il s’est en effet efforcé dans cet ouvrage d’aider les étudiants à découvrir le calcul à plusieurs variables, sa puissance pratique et son étonnante beauté.',
+  image:'images/variables.jpg'
+};
+var id10= {
+  bookName:'Calcul différentiel',
+  author: 'Marco Bélanger, Margot De Serres, Josée Bérubé',
+  disponible: 2,
+  class: 'MAT 1720, MAT 1320',
+  description:'Calcul différentiel s&apos;inscrit également dans le prolongement des trois compétences disciplinaires explorées au secondaire : communiquer à l&apos;aide du langage mathématique, déployer un raisonnement mathématique et résoudre une situation problème.',
+  image:'images/differentiel.jpg'
+};
+var id11= {
+  bookName:'Calcul différentiel, 8e éd.',
+  author: 'Gilles Charron, Pierre Parent',
+  disponible: 7,
+  class: 'MAT 1720, MAT 1320',
+  description:'Gilles Charron et Pierre Parent présentent la 8e édition de leur manuel. Son contenu a été révisé et sa structure adaptée à la réalité des élèves d’aujourd’hui. Ce classique propose une matière complète qui couvre tout le programme, toujours avec la même rigueur mathématique éprouvée et irréprochable.',
+  image:'images/calc.jpg'
+};
+var bookShelf= [id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11];
 
 //This displays the dropdown menu with available class filters
 function dropCour() {
