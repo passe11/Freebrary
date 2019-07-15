@@ -93,6 +93,7 @@ var bookShelf= [id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11];
 //This displays the dropdown menu with available class filters
 function dropCour() {
   //assurer que la fleche s'ajuste
+  document.getElementById("cour").style.border("none");
   var coursDropdown = document.getElementById("cours-dropdown");
   if(coursDropdown.classList.contains("fa-angle-right")){
     coursDropdown.classList.remove("fa-angle-right");

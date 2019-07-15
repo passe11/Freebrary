@@ -20,11 +20,37 @@
 	min-width: 150px;
 	margin:15px;
 }
+.optionlist{
+	list-style: none;
+}
+.option{
+	margin-top:10PX;
+	margin-left:20%;
+	padding:10px;
+	display:block;
+	border-radius:2px;
+	border-width: 0 0 1px 0;
+	border-color:#373737;
+	border-style: solid;
+}
 
+.optionDropdown{
+	list-style: none;
+	margin-left:20%;
+	border-radius:10px;
+	border-width: 0 0 1px 0;
+	border-color:#373737;
+	border-style: solid;
+
+}
 @media only screen and (max-width: 1000px) and (min-width: 500px) {
   .book {
     max-width: 33%!important;
 
+  }
+  .option{
+  		margin-top:10%;
+	margin-left:10%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -32,6 +58,10 @@
     max-width: 45%!important;
     margin:5px;
 
+  }
+    .option{
+  		margin-top:0%;
+	margin-left:0%;
   }
 }
 .shelf{
