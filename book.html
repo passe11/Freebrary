@@ -20,8 +20,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<!--Include script loads common html components-->
-	<script src="javascript/includes.js"></script>
 </head>
 <body class="container margin-top">
 <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
@@ -85,6 +83,35 @@
 			<p class="card-title"><span id="disponible">x</span>&nbsp;copie(s) disponible(s)</p>
 			<p class="card-text">à la bibliothèque Morisset (65 University Private, Ottawa, ON K1N 6N5)</p>
 			<button id="bookingButton" onClick="booking()" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Réserver</button>
+      <button id="waitListButton" onClick="booking()" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#attenteModal">Joindre liste d'attente</button>
+
+<!-- Attente modal -->
+<div class="modal text-dark" id="attenteModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 id="name3" class="modal-title">Book1</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <img id="modalImage2" class="img-fluid" src="images/book-black.png"  style="height: 300px; width: 250px" alt="Book">
+        <p>Aucune copie disponible&nbsp;&ndash;&nbsp; 3 usagers en attente</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button onclick="waitList()" type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#confirmation">Joindre liste d'attente</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Anuler</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--Reservation Modal-->
 <div class="modal text-dark" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -128,7 +155,7 @@
     </div>
   </div>
 </div>
-
+<!-- Login Modal-->
 <div class="modal text-dark" id="loginModal">
   <div class="modal-dialog">
     <div class="modal-content">

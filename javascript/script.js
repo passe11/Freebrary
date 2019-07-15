@@ -3,7 +3,7 @@ var find="";
 var id1= {
   bookName:'Chimie Organique',
   author: 'Graham Solomon, Craig Fryhle',
-  disponible: 9,
+  disponible: 0,
   class: 'CHM 1721',
   description:'La matière est présentée de façon simple et stimulante, et l&apos;accent est mis sur les habiletés essentielles à la réussite en chimie organique : résolution de problèmes, visualisation des structures et compréhension des mécanismes.',
   image:'images/chimie.jpg'
@@ -262,8 +262,10 @@ function booking(){
   if(localStorage.getItem("user")===""){
     //not loged in make him log in
 $('#bookingButton').attr('data-target','#loginModal');  
+$('#waitListButton').attr('data-target','#loginModal');  
   }else{
     //loged in give him the chance to make his reservation
-$('#bookingButton').attr('data-target','#myModal');  
+$('#bookingButton').attr('data-target','#myModal');
+$('#waitListButton').attr('data-target','#attenteModal');   
   }
 }
