@@ -9,157 +9,217 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/649b675417.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<!--Include script loads common html components-->
 	<script src="javascript/includes.js"></script>
 
 	<!--add jquery-->
-	<script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
 	<!--Global script for all pages-->
 	<script src="javascript/script.js"></script>
 </head>
 <nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-lg">
-  <a class="navbar-brand " href="index.html">Freebrary</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
-              <a class="dropdown-item" href="Mathematique.html">Mathematique</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Livres Populaires</a>
-              <a class="dropdown-item" href="#">Nouvelles additions</a>
-          </div>
-        </li>
-  </ul>
-<ul class="nav navbar-nav navbar-right">
-  <li>
-    <form id="myform" action="search.html" class="form-inline">
+	<a class="navbar-brand " href="index.html">Freebrary</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="Psychologie.html">Psychologie</a>
+					<a class="dropdown-item" href="Mathematique.html">Mathematique</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Livres Populaires</a>
+					<a class="dropdown-item" href="#">Nouvelles additions</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<form id="myform" action="search.html" class="form-inline">
 
-    <button type="submit" value="submit" class="btn-secondary fas fa-search" ></button>
-    <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  </form>
-</li>
-    <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button>login</button></a></li>
-    <li id="compte"><div class="dropdown transparent">
-  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <i class="fas fa-user"></i>&nbsp;Mon compte
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Mes emprunts</a>
-    <a class="dropdown-item" href="#">Paramètre du compte</a>
-    <a onclick="logout()" class="dropdown-item" href="#">Se déconecter</a>
-  </div>
-</div></li>
-  </ul>
-  </div>
-</nav>
-<body class="container-fluid margin-top">
-<section class="row">	
-	<div class="col-12 col-md-3 justify-content-center">
-		<ul class="optionlist">
-		<li ><span class="option">Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></span></li>
-		<li ><span class="option">Livre numérique&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></span></li>
-		<li ><span class="option">Livre papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></span></li>
-		<li ><span id="cour" class="option">Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right" onclick="dropCour()"></button></span>
-			<ul class="optionDropdown" style="display:none;" id="cours">
-				<li>Algèbre Linéaire<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
-				<li>Calculus 1<button class="fas fa-angle-right " onclick="disponible()"></button></li>
-				<li><span>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></span></li>
-			</ul>
-		</li>
+					<button type="submit" value="submit" class="btn-secondary fas fa-search"></button>
+					<input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search"
+						aria-label="Search">
+				</form>
+			</li>
+			<li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button>login</button></a>
+			</li>
+			<li id="compte">
+				<div class="dropdown transparent">
+					<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-user"></i>&nbsp;Mon compte
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">Mes emprunts</a>
+						<a class="dropdown-item" href="#">Paramètre du compte</a>
+						<a onclick="logout()" class="dropdown-item" href="#">Se déconecter</a>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
-	<div class="col-12 col-md-8">
-		<h2 class="display-5">Mathematique</h2>
-		<div class="d-flex flex-row flex-wrap justify-content-left">
-			<div onclick="redirect(id3)" style="cursor: pointer" class="card book disponible papier">
-				<img class="card-img-top" src="images/calcul1.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Calcul dif. (I)</h3>
-				<p class="card-text">disponible<br>papier</p>
+</nav>
+
+<body class="container-fluid margin-top">
+	<section class="row">
+		<div class="col-12 col-md-3 justify-content-center">
+			<ul class="optionlist">
+				<li><span class="option">Disponible&nbsp;<button class="fas fa-angle-right"
+							onclick="disponible()"></button></span></li>
+				<li><span class="option">Livre numérique&nbsp;<button class="fas fa-angle-right"
+							onclick="numerique()"></button></span></li>
+				<li><span class="option">Livre papier&nbsp;<button class="fas fa-angle-right"
+							onclick="papier()"></button></span></li>
+				<li><span id="cour" class="option">Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right"
+							onclick="dropCour()"></button></span>
+					<ul class="optionDropdown" style="display:none;" id="cours">
+						<li>Algèbre Linéaire<button class="fas fa-angle-right transparent"
+								onclick="disponible()"></button></li>
+						<li>Calculus 1<button class="fas fa-angle-right " onclick="disponible()"></button></li>
+						<li><span>Calculus 2<button class="fas fa-angle-right " onclick="disponible()"></button></span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col-12 col-md-8">
+			<h2 class="display-5">Mathematiques</h2>
+			<div class="d-flex flex-row flex-wrap justify-content-left">
+				<div onclick="redirect(id3)" style="cursor: pointer" class="card book disponible papier">
+					<img class="card-img-top" src="images/calcul1.jpg" alt="Book">
+					<div class="card-body">
+						<a href="#">
+							<h5 class="card-title">Calcul dif. (I)</h5>
+						</a>
+						<p class="card-text"><i>Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathéma...</i></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id8)" style="cursor: pointer" class="card book disponible">
-				<img class="card-img-top" src="images/calcul2.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Calcul int. (II)</h3>
-				<p class="card-text">disponible</p>
+				<div onclick="redirect(id8)" style="cursor: pointer" class="card book disponible">
+					<img class="card-img-top" src="images/calcul2.jpg" alt="Book">
+					<div class="card-body">
+						<a onclick="select(id8)" href="book.html">
+							<h5 class="card-title">Calcul int. (II)</h5>
+						</a>
+						<p class="card-text"><i>En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de...</i></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id6)" style="cursor: pointer" class="card book disponible papier">
-				<img class="card-img-top" src="images/calcul3.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Caclul avancé</h3>
-				<p class="card-text">disponible<br>papier</p>
+				<div onclick="redirect(id6)" style="cursor: pointer" class="card book disponible papier">
+					<img class="card-img-top" src="images/calcul3.jpg" alt="Book">
+					<div class="card-body">
+						<a>
+							<h5 class="card-title">Caclul avancé</h5>
+						</a>
+						<p class="card-text"><i>Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est...
+							</i></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id5)" style="cursor: pointer" class="card book disponible">
-				<img class="card-img-top" src="images/algebre.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Algèbre linéaire</h3>
-				<p class="card-text">disponible</p>
+				<div onclick="redirect(id5)" style="cursor: pointer" class="card book disponible">
+					<img class="card-img-top" src="images/algebre.jpg" alt="Book">
+					<div class="card-body">
+						<a href="#">
+							<h5 class="card-title">Algèbre linéaire</h5>
+						</a>
+						<p class="card-text"><i>Présente les concepts de base de l&apos;algèbre linéaire et les outils dont l&apos;étu...</i>disponible</p>
+						<div class="card-footer">
+							<a href="#" class="card-link secondary-text">Emprunter</a>
+						</div>					
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id7)" style="cursor: pointer" class="card book papier">
-				<img class="card-img-top" src="images/discrete.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Maths discrètes</h3>
-				<p class="card-text">Disponible</p>
+				<div onclick="redirect(id7)" style="cursor: pointer" class="card book papier">
+					<img class="card-img-top" src="images/discrete.jpg" alt="Book">
+					<div class="card-body">
+						<a href=#>
+							<h5 class="card-title">Maths Discrètes</h5>
+						</a>
+						<p class="card-text"><i>Encensé par les spécialistes de l&apos;informatique, cet ouvrage doit son succès à...</i>></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id9)" class="card book papier">
-				<img class="card-img-top" src="images/variables.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Calcul à plusieurs variables</h3>
-				<p class="card-text">Non disponible</p>
+				<div onclick="redirect(id9)" class="card book papier">
+					<img class="card-img-top" src="images/variables.jpg" alt="Book">
+					<div class="card-body">
+						<a href="#">
+							<h5 class="card-title">Calcul à plusieurs variables</h5>
+						</a>
+						<p class="card-text"><i>L’art d’enseigner, disait l’écrivain Mark Van Doren, est l’art d’aider à découvrir. Et...</i></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id10)" class="card book papier">
-				<img class="card-img-top" src="images/differentiel.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Calcul différent.</h3>
-				<p class="card-text">Non disponible</p>
+				<div onclick="redirect(id10)" class="card book papier">
+					<img class="card-img-top" src="images/differentiel.jpg" alt="Book">
+					<div class="card-body">
+						<a href="#">
+							<h5 class="card-title">Calcul Différent.</h5>
+						</a>
+						<p class="card-text"><i>Calcul différentiel s&apos;inscrit également dans le prolongement des trois compétence...</i>></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
-			</div>
-			<div onclick="redirect(id11)" class="card book papier">
-				<img class="card-img-top" src="images/calc.jpg"  alt="Book">
-				<div class="card-body">
-				<h3 class="card-title">Maths simples</h3>
-				<p class="card-text">Non disponible</p>
+				<div onclick="redirect(id11)" class="card book papier">
+					<img class="card-img-top" src="images/calc.jpg" alt="Book">
+					<div class="card-body">
+						<a href="#">
+							<h5 class="card-title">Maths Simples</h5>
+						</a>
+						<p class="card-text"><i>Gilles Charron et Pierre Parent présentent la 8e édition de leur manuel. Son contenu a...</i></p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="card-link secondary-text">Emprunter</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<script src="javascript/script.js"></script>
+	</section>
+	<script src="javascript/script.js"></script>
 </body>
-	<div class="bottom container">
+<div class="bottom container">
 	<div class="row">
-    <div class="col-sm">
-      <p><a href="#">Politiques</a></p>
-      <p><a href="#">Accessibilité</a></p>
-      <p><a href="#">Droit d'auteur</a></p>
-    </div>
-    <div class="col-sm">
-      <p><a href="#">Freebrary en bref</a></p>
-      <p><a href="#">Nous contacter</a></p>
-      <p><a href="#">Période d'emprunt et frais</a></p>
-    </div>
-    <div class="col-sm">
-     <p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
-     <p>(613) 562-5213
-    </div>
-  </div>
-  </div>
+		<div class="col-sm">
+			<p><a href="#">Politiques</a></p>
+			<p><a href="#">Accessibilité</a></p>
+			<p><a href="#">Droit d'auteur</a></p>
+		</div>
+		<div class="col-sm">
+			<p><a href="#">Freebrary en bref</a></p>
+			<p><a href="#">Nous contacter</a></p>
+			<p><a href="#">Période d'emprunt et frais</a></p>
+		</div>
+		<div class="col-sm">
+			<p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
+			<p>(613) 562-5213
+		</div>
+	</div>
+</div>
+
 </html>
