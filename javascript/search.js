@@ -1,4 +1,5 @@
 function search(){
+	if(searchLoad()){
 	var par= document.getElementById("par").innerHTML;
 	var books = $( ".book" );
 $( ".book" ).each(function(){
@@ -8,7 +9,6 @@ $( ".book" ).each(function(){
 
 var x = $(this).attr('id');
     if(x.includes(par)){
-    	alert(x);
     	$(this).css = "display: block";
     }else{
     	$(this).remove();
@@ -17,7 +17,7 @@ var x = $(this).attr('id');
 
  });
 
-
+}
 
 
 }

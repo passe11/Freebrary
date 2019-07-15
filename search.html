@@ -62,7 +62,7 @@
   </div>
 </nav>
 <!-- loads the search() function on load. The search function will remove any book that does not match the search criteria in localstorage-->
-<body onload="search()" class="container-fluid margin-top">
+<body id="searchBody" onload="search(this)" class="container-fluid margin-top">
 <section class="row">
 	<div class="col-12 col-md-3">
 		<ul>
@@ -79,7 +79,7 @@
 	</div>
 	<div class="col-12 col-md-8">
 		<h2 class="display-5">Search&nbsp;&ndash;&nbsp;<span id="par">Paramether</span></h2>
-		<div class="d-flex flex-row flex-wrap justify-content-left">
+		<div id="bookShelf" class="d-flex flex-row flex-wrap justify-content-left">
 			<div id="Calculus" class="card disponible book papier">
 				<img class="card-img-top" src="images/book-black.png"  alt="Book">
 				<div class="card-body">

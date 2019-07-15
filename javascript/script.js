@@ -1,4 +1,70 @@
 var find="";
+//Livres représentés comme objets JavaScript 
+var id1= {
+  bookName:'Chimie Organique',
+  author: 'Graham Solomon, Craig Fryhle',
+  disponible: 9,
+  class: 'CHM 1721',
+  description:'La matière est présentée de façon simple et stimulante, et l&apos;accent est mis sur les habiletés essentielles à la réussite en chimie organique : résolution de problèmes, visualisation des structures et compréhension des mécanismes.',
+  image:'images/chimie.jpg'
+};
+var id2= {
+  bookName:'Mécanique pour ingénieurs, 3e éd.',
+  author: 'Ferdinand P. Beer, E. Russell Johnston Jr., David F. Mazurek',
+  disponible: 18,
+  class: 'GNG 1505, GNG 1105',
+  description:'Mécanique pour ingénieurs, 3e édition accompagne les étudiants de premier cycle universitaire en génie ainsi que leurs professeurs dans les cours de statique (volume 1) et de dynamique (volume 2)',
+  image:'images/mecanique.jpg'
+};
+var id3= {
+  bookName:'Calcul différentiel (I)',
+  author: 'James Stewart',
+  disponible: 15,
+  class: 'MAT 1720, MAT 1320',
+  description:'Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathématique. Une approche des mathématiques basée sur une méthode de résolution de problèmes favorisant une meilleure intégration des concepts.',
+  image:'images/calcul1.jpg'
+};
+var id4= {
+  bookName:'Apprendre à programmer avec Python 3',
+  author: 'Gérard Swinnen',
+  disponible: 11,
+  class: 'ITI 1120, ITI 1520',
+  description:'Un livre incontournable pour acquérir l&apos;exigeante discipline qu&apos;est l&apos;art de la programmation ! Original et stimulant, cet ouvrage aborde au travers d&apos;exemples attrayants et concrets tous les fondamentaux de la programmation.',
+  image:'images/programming.jpg'
+};
+let id5= {
+  bookName:'Algèbre linéaire et applications',
+  author: 'David C. Lay, Michel Henri',
+  disponible: 14,
+  class: 'MAT 1741, MAT 1341',
+  description:'Présente les concepts de base de l&apos;algèbre linéaire et les outils dont l&apos;étudiant aura besoin dans sa vie professionnelle. Propose une large sélection d&apos;applications, d&apos;exemples et d&apos;exercices permettant d&apos;aborder les difficultés réelles rencontrées.',
+  image:'images/algebre.jpg'
+};
+var id6= {
+  bookName:'Calcul avancé',
+  author: 'James Stewart',
+  disponible: 14,
+  class: 'MAT 1722, MAT 1322, MAT 2322, MAT 2722, MAT 2322',
+  description:'Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est d&apos;une grande précision mathématique et d&apos;une grande rigueur scientifique et offerte en couleurs pour faciliter la lecture et l&apos;apprentissage des étudiants.',
+  image:'images/calcul3.jpg'
+};
+var id7= {
+  bookName:'Mathématiques discrètes, édition révisée',
+  author: 'Kenneth Rosen',
+  disponible: 13,
+  class: 'MAT 1748',
+  description:'Encensé par les spécialistes de l&apos;informatique, cet ouvrage doit son succès à la clarté de ses exposés, à la diversité de ses exemples et de ses exercices ainsi qu&apos;à la richesse et au nombre des applications qui y sont traitées.',
+  image:'images/discrete.jpg'
+};
+var id8= {
+  bookName:'Caclul intégral II',
+  author: 'James Stewart',
+  disponible: 7,
+  class: 'MAT 1720, MAT 1320, MAT 1722, MAT 1322',
+  description:'En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de James Stewart, elle présente une réorganisation, notamment en ce qui concerne les notions sur les suites et les séries, ainsi que des exercices et des problèmes supplémentaires.',
+  image:'images/calcul2.jpg'
+};
+var bookShelf= [id1,id2,id3,id4,id5,id6,id7,id8];
 
 //This displays the dropdown menu with available class filters
 function dropCour() {
@@ -115,74 +181,30 @@ localStorage.setItem("user","");
 $('#compte').css('display', 'none');
 $('#login').css('display', 'inline-block');
 }
+function searchLoad(){
+	var livreStrings ="";
+	var dispo =""
+	for(i=0;i<bookShelf.length;i++){
+		var livre = Object.values(bookShelf[i]);
+		if(livre[2]>0){
+			dispo="disponible";
+		}
+		livreStrings+= '<div id="'+livre[0]+'" class="card book '+dispo+livre[3]+'+"><img class="card-img-top" src="'+livre[5]+'"  alt="Book"><div class="card-body"><h3 class="card-title">'+livre[0]+'</h3><p class="card-text">'+livre[4].substring(0,35)+'<br>'+dispo+'</p></div></div>';
+	}
 
-//var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
-
-//Livres représentés comme objets JavaScript 
-let id1= {
-  bookName:'Chimie Organique',
-  author: 'Graham Solomon, Craig Fryhle',
-  disponible: 9,
-  class: 'CHM 1721',
-  description:'La matière est présentée de façon simple et stimulante, et l&apos;accent est mis sur les habiletés essentielles à la réussite en chimie organique : résolution de problèmes, visualisation des structures et compréhension des mécanismes.',
-  image:'images/chimie.jpg'
-};
-let id2= {
-  bookName:'Mécanique pour ingénieurs, 3e éd.',
-  author: 'Ferdinand P. Beer, E. Russell Johnston Jr., David F. Mazurek',
-  disponible: 18,
-  class: 'GNG 1505, GNG 1105',
-  description:'Mécanique pour ingénieurs, 3e édition accompagne les étudiants de premier cycle universitaire en génie ainsi que leurs professeurs dans les cours de statique (volume 1) et de dynamique (volume 2)',
-  image:'images/mecanique.jpg'
-};
-let id3= {
-  bookName:'Calcul différentiel (I)',
-  author: 'James Stewart',
-  disponible: 15,
-  class: 'MAT 1720, MAT 1320',
-  description:'Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathématique. Une approche des mathématiques basée sur une méthode de résolution de problèmes favorisant une meilleure intégration des concepts.',
-  image:'images/calcul1.jpg'
-};
-let id4= {
-  bookName:'Apprendre à programmer avec Python 3',
-  author: 'Gérard Swinnen',
-  disponible: 11,
-  class: 'ITI 1120, ITI 1520',
-  description:'Un livre incontournable pour acquérir l&apos;exigeante discipline qu&apos;est l&apos;art de la programmation ! Original et stimulant, cet ouvrage aborde au travers d&apos;exemples attrayants et concrets tous les fondamentaux de la programmation.',
-  image:'images/programming.jpg'
-};
-let id5= {
-  bookName:'Algèbre linéaire et applications',
+	/*bookName:'Algèbre linéaire et applications',
   author: 'David C. Lay, Michel Henri',
   disponible: 14,
   class: 'MAT 1741, MAT 1341',
   description:'Présente les concepts de base de l&apos;algèbre linéaire et les outils dont l&apos;étudiant aura besoin dans sa vie professionnelle. Propose une large sélection d&apos;applications, d&apos;exemples et d&apos;exercices permettant d&apos;aborder les difficultés réelles rencontrées.',
-  image:'images/algebre.jpg'
-};
-let id6= {
-  bookName:'Calcul avancé',
-  author: 'James Stewart',
-  disponible: 14,
-  class: 'MAT 1722, MAT 1322, MAT 2322, MAT 2722, MAT 2322',
-  description:'Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est d&apos;une grande précision mathématique et d&apos;une grande rigueur scientifique et offerte en couleurs pour faciliter la lecture et l&apos;apprentissage des étudiants.',
-  image:'images/calcul3.jpg'
-};
-let id7= {
-  bookName:'Mathématiques discrètes, édition révisée',
-  author: 'Kenneth Rosen',
-  disponible: 13,
-  class: 'MAT 1748',
-  description:'Encensé par les spécialistes de l&apos;informatique, cet ouvrage doit son succès à la clarté de ses exposés, à la diversité de ses exemples et de ses exercices ainsi qu&apos;à la richesse et au nombre des applications qui y sont traitées.',
-  image:'images/discrete.jpg'
-};
-let id8= {
-  bookName:'Caclul intégral II',
-  author: 'James Stewart',
-  disponible: 7,
-  class: 'MAT 1720, MAT 1320, MAT 1722, MAT 1322',
-  description:'En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de James Stewart, elle présente une réorganisation, notamment en ce qui concerne les notions sur les suites et les séries, ainsi que des exercices et des problèmes supplémentaires.',
-  image:'images/calcul2.jpg'
-};
+  image:'images/algebre.jpg'*/
+document.getElementById("bookShelf").innerHTML=livreStrings;
+return true;
+}
+/*
+*/
+//var book1 = {"Pascalus Calulus","Hi","This test 2","hope this works"};
+
 
 /*function test(bookname){
   Object.values(bookname).forEach(item => {
