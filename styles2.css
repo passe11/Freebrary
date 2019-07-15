@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #356859;
+    --secondary-color: #fd5523;
+    --background-color: #FFFBE6;
+    --foreground-color: #FFFBE6;
+    --highlight-color: #B9E4C9;
+}
+
+html, body {
+    font-family: 'Rubik', "Helvetica", sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
