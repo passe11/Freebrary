@@ -3,7 +3,7 @@
     --secondary-color: #fd5523;
     --background-color: #FFFBE6;
     --foreground-color: #F2EDD0;
-    --highlight-color: #B9E4C9;
+    --highlight-color: rgb(83, 151, 108);
 }
 
 html, body {
@@ -45,4 +45,8 @@ a {
 	color: var(--primary-color);
 	background-color: transparent;
 	border-color: transparent;
+}
+
+.highlight {
+    background-color: var(--highlight-color) !important;
 }
