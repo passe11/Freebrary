@@ -8,6 +8,7 @@
 	padding-top:0.5em;
 }
 .fas{
+	/*color: grey!important;*/
 	background-color: transparent !important;
 	border-color: transparent !important;
 }
@@ -20,6 +21,27 @@
 	min-width: 150px;
 	margin:15px;
 }
+.shelf{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.inline{display:inline;}
+
+.bottom{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-width: 2px 0 0 0;
+	border-color:#373737;
+	border-style: solid;
+
+}
+
+/* Added from commit cb255c0db*/
 .optionlist{
 	list-style: none;
 }
@@ -41,43 +63,4 @@
 	border-width: 0 0 1px 0;
 	border-color:#373737;
 	border-style: solid;
-
-}
-@media only screen and (max-width: 1000px) and (min-width: 500px) {
-  .book {
-    max-width: 33%!important;
-
-  }
-  .option{
-  		margin-top:10%;
-	margin-left:10%;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .book {
-    max-width: 45%!important;
-    margin:5px;
-
-  }
-    .option{
-  		margin-top:0%;
-	margin-left:0%;
-  }
-}
-.shelf{
-	display:flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.inline{display:inline;}
-
-.bottom{
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	border-width: 1px 0 0 0;
-	border-color:#373737;
-	border-style: solid;
-
 }
