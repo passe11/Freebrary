@@ -40,37 +40,30 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Livres Populaires</a>
               <a class="dropdown-item" href="#">Nouvelles additions</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <form id="myform" action="search.html" class="form-inline">
-              <button type="submit" value="submit" class="btn-secondary fas fa-search"></button>
-              <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Search"
-                aria-label="Search">
-  
-            </form>
-          </li>
-          <li id="login" class="nav-item"><a href="login.html" class="nav-link"
-              href="#"><button>login</button></a></li>
-          <li id="compte">
-            <div class="dropdown transparent">
-              <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>&nbsp;Mon compte
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Mes emprunts</a>
-                <a class="dropdown-item" href="#">Paramètre</a>
-                <a onclick="logout()" class="dropdown-item" href="#">Se déconecter</a>
-  
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        </li>
+  </ul>
+<ul class="nav navbar-nav navbar-right">
+  <li>
+    <form id="myform" action="search.html" class="form-inline">
+    <button type="submit" value="submit" class="transparent fas fa-search" ></button>
+    <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+  </form>
+</li>
+    <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button>login</button></a></li>
+    <li id="compte"><div class="dropdown transparent">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user"></i>&nbsp;Mon compte
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="reservation.html">Mes emprunts</a>
+    <a class="dropdown-item" href="#">Paramètre du compte</a>
+    <a onclick="logout()" class="dropdown-item" href="#">Se déconecter</a>
+
+  </div>
+</div></li>
+  </ul>
+  </div>
+</nav>
 
 	<section>
 <h2>Mes réservations</h2>
@@ -78,33 +71,6 @@
 	<p>Vous n'avez aucun livre réservé en ce moment, veuillez à la page d'accueil pour réserver des livres.</p>
 </div>
 <h2>Livre(s) en attente</h2>
-<div id="loaderAttente" class="d-flex flex-row flex-wrap justify-content-left">
-  <p>Vous n'avez aucun livre en attente en ce moment.</p>
-</div>
-
-	</section>
-	<!--This is are global script-->
-	<!--Load script at the end of body for better loading efficiency-->
-	<script src="javascript/script.js"></script>
-	<script src="javascript/reservation.js"></script>
-</body>
-	
-<div class="bottom container">
-	<div class="row">
-    <div class="col-sm">
-      <p><a href="#">Politiques</a></p>
-      <p><a href="#">Accessibilité</a></p>
-      <p><a href="#">Droit d'auteur</a></p>
-    </div>
-    <div class="col-sm">
-      <p><a href="#">Freebrary en bref</a></p>
-      <p><a href="#">Nous contacter</a></p>
-      <p><a href="#">Période d'emprunt et frais</a></p>
-    </div>
-    <div class="col-sm">
-     <p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
-     <p>(613) 562-5213
-    </div>
   </div>
   </div>
 </html>
