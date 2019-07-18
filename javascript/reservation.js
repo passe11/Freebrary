@@ -6,9 +6,10 @@ loadbooks();
 });
 
 function loadbooks(){
+if(localStorage.getItem("user")===""){ 
+	alert("pas d'usager connecté")}
+else{
 var book ="";
-
-
 var mybooks=JSON.parse(localStorage.getItem("reservation"));
 
 for(i=0;i<mybooks.length;i++){
@@ -29,6 +30,7 @@ if(book===""){
 	book='<p>Vous n&apos;avez aucun livre en attente en ce moment.</p>';
 }
     document.getElementById("loaderAttente").innerHTML= book;
+}
 }
 function annulation(i){
 var mybooks=JSON.parse(localStorage.getItem("reservation"));

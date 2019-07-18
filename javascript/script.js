@@ -115,9 +115,11 @@ function dropCour() {
 function disponible() {
   if(find.includes("disponible")){
   find = find.replace("disponible","")
+  document.getElementById("badgeDisponible").style.display = "none";
   filter(find);
 }else{
 find+="disponible ";
+document.getElementById("badgeDisponible").style.display = "block";
 filter(find);
 }
 }
@@ -142,9 +144,11 @@ for(i=0;i<hide.length;i++){
 function papier() {
   if(find.includes("papier")){
   find = find.replace("papier","")
+  document.getElementById("badgePapier").style.display = "none";
   filter(find);
 }else{
 find+="papier ";
+document.getElementById("badgePapier").style.display = "block";
 filter(find);
 }
 }  

@@ -21,7 +21,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body class="container margin-top">
+<body class="container-fluid margin-top">
   <nav class="navbar fixed-top navbar-dark bg-primary navbar-expand-lg">
     <a class="navbar-brand" href="index.html">Freebrary</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,8 @@
     </div>
   </nav>
 
-	<section class="row">
+	<section class="container">
+    <div class="row">
 		<div class="col-lg-8 col-sm-12">
 			<div class="container-fluid">
 			<div class="row">
@@ -78,7 +79,7 @@
 	</div>
 </div>
 		<div class="col-lg-4 col-sm-12">
-			<div class="card text-white bg-dark mb-3">
+			<div class="card text-dark bg-light mb-3">
 				<div class="card-body">
 			<p class="card-title"><span id="disponible">x</span>&nbsp;copie(s) disponible(s)</p>
 			<p class="card-text">à la bibliothèque Morisset (65 University Private, Ottawa, ON K1N 6N5)</p>
@@ -185,6 +186,7 @@
 		</div>
 		</div>
 		</div>
+  </div>
 	</section>
 	<!--This is are global script-->
 	<!--Load script at the end of body for better loading efficiency-->
@@ -204,8 +206,9 @@
   });
 	</script>
 </body>
-<div class="bottom container">
-	<div class="row">
+<div class="bottom container-fluid justify-content-center">
+  <div class="row">
+  <div class="col-md"></div>
     <div class="col-sm">
       <p><a href="#">Politiques</a></p>
       <p><a href="#">Accessibilité</a></p>
@@ -220,6 +223,7 @@
      <p>65 University Private,<br> Ottawa,<br> ON K1N 6N5</p>
      <p>(613) 562-5213
     </div>
+    <div class="col-md"></div>
   </div>
   </div>
 

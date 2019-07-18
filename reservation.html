@@ -20,7 +20,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<!--Include script loads common html components-->
-	<script src="javascript/includes.js"></script>
+	<script src="javascript/reservation.js"></script>
+  <script src="javascript/script.js"></script>
 </head>
 <body class="container margin-top">
 <nav class="navbar fixed-top navbar-dark bg-primary navbar-expand-lg">
@@ -47,7 +48,7 @@
       <input id="form-field" class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
     </form>
   </li>
-      <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button class="btn btn-primary">login</button></a></li>
+      <li id="login" class="nav-item"><a href="login.html" class="nav-link" href="#"><button class="btn-primary">login</button></a></li>
       <li id="compte"><div class="dropdown transparent">
     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <i class="fas fa-user"></i>&nbsp;Mon compte
@@ -55,7 +56,7 @@
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="reservation.html">Mes réservations</a>
       <a class="dropdown-item" href="#">Paramètres</a>
-      <a onclick="logout()" class="dropdown-item" href="#">Se déconnecter</a>
+      <a onclick="logout()" class="dropdown-item" href="index.html">Se déconnecter</a>
     </div>
   </div></li>
     </ul>
@@ -68,6 +69,7 @@
 	<p>Vous n'avez aucun livre réservé en ce moment, veuillez à la page d'accueil pour réserver des livres.</p>
 </div>
 <h2>Livre(s) en attente</h2>
+<div id="loaderAttente" class="d-flex flex-row flex-wrap justify-content-left"></div>
   </div>
   </div>
 </html>

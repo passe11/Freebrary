@@ -35,6 +35,8 @@ books.push(book);
 //JSON.stringify(names)
 //JSON.parse(localStorage.getItem("names")
 }
+
+
 function waitList(){
     var book=[];
     if(localStorage.getItem("attente")){
