@@ -13,7 +13,7 @@ var book ="";
 var mybooks=JSON.parse(localStorage.getItem("reservation"));
 
 for(i=0;i<mybooks.length;i++){
-book+= '<div id='+i+' class="card book"><img class="card-img-top" src="'+mybooks[i][1]+'"  alt="Book"><div class="card-body"><h3 class="card-title">'+mybooks[i][0]+'</h3><p class="card-text">Durée d&apos;emprunt :<br>'+mybooks[i][2]+'</p><button style="display:inline-block" onclick="annulation('+i+')" type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button></div></div>';
+book+= '<div id='+i+' class="card book"><img class="card-img-top" src="'+mybooks[i][1]+'"  alt="Book"><div class="card-body"><h3 class="card-title">'+mybooks[i][0]+'</h3><p class="card-text"><strong>Durée d&apos;emprunt :</strong><br>'+mybooks[i][2]+'</p><p class="card-text"><strong>Commençant le: </strong><br>'+mybooks[i][3]+'</p><button style="display:inline-block" onclick="annulation('+i+')" type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button></div></div>';
 }
 if(book===""){
 	book='<p>Vous n&apos;avez aucun livre réservé en ce moment, veuillez à la page d&apos;accueil pour réserver des livres.</p>';

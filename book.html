@@ -32,7 +32,7 @@
             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collections</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="Psychologie.html">Psychologie</a>
-                <a class="dropdown-item" href="Mathematique.html">Mathematiques</a>
+                <a class="dropdown-item" href="Mathematique.html">Mathématiques</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Livres Populaires</a>
                 <a class="dropdown-item" href="#">Nouvelles additions</a>
@@ -104,8 +104,8 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button onclick="waitList()" type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#confirmation">Joindre liste d'attente</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Anuler</button>
+        <button onclick="waitList()" type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#confirmation-attente">Joindre liste d'attente</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
       </div>
 
     </div>
@@ -126,7 +126,7 @@
       <div class="modal-body">
         <img id="modalImage" class="img-fluid" src="images/book-black.png"  style="height: 300px; width: 250px" alt="Book">
         <hr>
-        <p>Date du début de l'emprunt</p><input type="date" name="Date emprunt" min="2019-07-18">
+        <p>Date du début de l'emprunt</p><input type="date" id="start-date" name="Date emprunt" min="2019-07-18">
         <p>Période d'emprunt</p>
         <select id="emprunt" class="custom-select custom-select-sm">
   <option>1 semaine (7 jours)</option>
@@ -139,7 +139,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
       	<button onclick="reservation()" type="button" class="btn" data-dismiss="modal" data-toggle="modal" data-target="#confirmation">Réserver</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Anuler</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
       </div>
 
     </div>
@@ -150,7 +150,18 @@
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header">
-      	<p>Bravo reservation avec succes</p>
+      	<p>Bravo! La réservation est un succès! Veuillez accéder à la page <strong>Mes Réservations</strong> sous le menu <strong>Mon Compte</strong> pour voir vos livres réservés.</p>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal text-dark" id="confirmation-attente">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <p>Bravo! La mise en attenente est un succès! Veuillez accéder à la page <strong>Mes Réservations</strong> sous le menu <strong>Mon Compte</strong> pour voir vos livres en attente.</p>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
     </div>

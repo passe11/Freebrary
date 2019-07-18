@@ -20,20 +20,26 @@ $( document ).ready(function() {
 });
 
 function reservation(){
-	var book=[];
-	if(localStorage.getItem("reservation")){
-	var books =	JSON.parse(localStorage.getItem("reservation"));
-	}else{
-		var books = [];
-	}
-book.push(localStorage.getItem("name"));
-book.push(localStorage.getItem("image"));
-book.push(getSelected());
-books.push(book);
- localStorage.setItem("reservation",JSON.stringify(books));
- alert(JSON.stringify(books));
-//JSON.stringify(names)
-//JSON.parse(localStorage.getItem("names")
+    //Si l'usager n'a pas entré une date d'emprunt, afficher une alerte
+    if(getStartDate() == ""){
+        alert("Veuillez entrer une date pour le début de l'emprunt.");
+    } else {
+    var book=[];
+    if(localStorage.getItem("reservation")){
+        var books =	JSON.parse(localStorage.getItem("reservation"));
+    }else{
+        var books = [];
+    }
+    book.push(localStorage.getItem("name"));
+    book.push(localStorage.getItem("image"));
+    book.push(getSelected());
+    book.push(getStartDate());
+    books.push(book);
+    localStorage.setItem("reservation",JSON.stringify(books));
+    alert(JSON.stringify(books));
+    //JSON.stringify(names)
+    //JSON.parse(localStorage.getItem("names")
+    }
 }
 
 
@@ -55,4 +61,9 @@ books.push(book);
 
 function getSelected(){
 return($('#emprunt :selected').text());
+}
+
+function getStartDate(){
+    var startDate = document.getElementById('start-date').value;
+    return startDate;
 }
