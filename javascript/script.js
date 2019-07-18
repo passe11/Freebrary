@@ -32,7 +32,7 @@ var id4= {
   description:'Un livre incontournable pour acquérir l&apos;exigeante discipline qu&apos;est l&apos;art de la programmation ! Original et stimulant, cet ouvrage aborde au travers d&apos;exemples attrayants et concrets tous les fondamentaux de la programmation.',
   image:'images/programming.jpg'
 };
-let id5= {
+var id5= {
   bookName:'Algèbre linéaire et applications',
   author: 'David C. Lay, Michel Henri',
   disponible: 14,
@@ -67,7 +67,7 @@ var id8= {
 var id9= {
   bookName:'Calcul à plusieurs variables',
   author: 'James Stewart, Jean Guérin',
-  disponible: 8,
+  disponible: 0,
   class: 'MAT 1720, MAT 1320, MAT 1722, MAT 1322',
   description:'L’art d’enseigner, disait l’écrivain Mark Van Doren, est l’art d’aider à découvrir. Et on peut dire que James Stewart possédait cet art. Il s’est en effet efforcé dans cet ouvrage d’aider les étudiants à découvrir le calcul à plusieurs variables, sa puissance pratique et son étonnante beauté.',
   image:'images/variables.jpg'
@@ -75,7 +75,7 @@ var id9= {
 var id10= {
   bookName:'Calcul différentiel',
   author: 'Marco Bélanger, Margot De Serres, Josée Bérubé',
-  disponible: 2,
+  disponible: 0,
   class: 'MAT 1720, MAT 1320',
   description:'Calcul différentiel s&apos;inscrit également dans le prolongement des trois compétences disciplinaires explorées au secondaire : communiquer à l&apos;aide du langage mathématique, déployer un raisonnement mathématique et résoudre une situation problème.',
   image:'images/differentiel.jpg'
@@ -124,22 +124,19 @@ filter(find);
 }
 }
 
-function xdisponible() {
-  const show = Array.from(document.getElementsByClassName("disponible"));
-  const books= Array.from(document.getElementsByClassName("book"));
-  var hide= books.filter(x => !show.includes(x));
-
-for(i=0;i<hide.length;i++){
-  
- 
-  if (hide[i].style.display === "none") {
-   hide[i].style.display = "block";
-  } else {
-    hide[i].style.display = "none";
-  }
-
+function numerique() {
+  if(find.includes("numerique")){
+  find = find.replace("numerique","")
+  document.getElementById("badgeNumerique").style.display = "none";
+  filter(find);
+}else{
+find+="numerique ";
+document.getElementById("badgeNumerique").style.display = "block";
+filter(find);
 }
 }
+
+
 
 function papier() {
   if(find.includes("papier")){

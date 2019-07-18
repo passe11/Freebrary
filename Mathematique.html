@@ -66,11 +66,13 @@
 </nav>
 <body class="container-fluid margin-top justify-content-center">
 <section class="row">
-	<div class="col-12 col-md-3">
+	<div class="col-8 col-md-3">
 		<ul class="optionlist">
 		<li><span class="option">Disponible&nbsp;<button class="fas fa-angle-right" onclick="disponible()"></button></span></li>
 		<li><span class="option">Livres numériques&nbsp;<button class="fas fa-angle-right" onclick="numerique()"></button></span></li>
 		<li><span class="option">Livres papier&nbsp;<button class="fas fa-angle-right" onclick="papier()"></button></span></li>
+		<li><span class="option">Français&nbsp;<button class="fas fa-angle-right" onclick="francais()"></button></span></li>
+		<li><span class="option">Englais&nbsp;<button class="fas fa-angle-right" onclick="englais()"></button></span></li>
 		<li><span id="cour" class="option">Cours&nbsp;<button id="cours-dropdown" class="fas fa-angle-right" onclick="dropCour()"></button></span>
 			<ul class="optionDropdown" style="display:none;" id="cours">
 				<li>Algèbre Linéaire<button class="fas fa-angle-right transparent" onclick="disponible()"></button></li>
@@ -79,13 +81,13 @@
 			</ul>
 		</li>
 			<li class="optionBadge" id="badgeDisponible" ><span  onclick="disponible()" class="badge badge-primary">Disponible &times;</span></li>
-			<li class="optionBadge" id="badgeNumérique"  ><span class="badge badge-pill badge-primary">Numérique &times;</span></li>
-			<li class="optionBadge" id="badgePapier" ><span class="badge badge-pill badge-primary">Papier&times;</span></li>
-			<li class="optionBadge" id="badgeFrancais" ><span  class="badge badge-pill badge-primary">Français &times;</span></li>
-			<li class="optionBadge" id="badgeFrancais" ><span  class="badge badge-pill badge-primary">Anglais &times;</span></li>
+			<li class="optionBadge" id="badgeNumerique"  ><span onclick="numerique()" class="badge badge-pill badge-primary">Numérique &times;</span></li>
+			<li class="optionBadge" id="badgePapier" ><span onclick="papier()"class="badge badge-pill badge-primary">Papier&times;</span></li>
+			<li class="optionBadge" id="badgeFrancais" ><span onclick="francais()" class="badge badge-pill badge-primary">Français &times;</span></li>
+			<li class="optionBadge" id="badgeFrancais" ><span onclick="englais()" class="badge badge-pill badge-primary">Anglais &times;</span></li>
 		</ul>
 	</div>
-	<div class="col-12 col-md-8">
+	<div class="col-12 col-md-9">
 		<h2 class="display-5">Mathematique</h2>
 		<div class="d-flex flex-row flex-wrap justify-content-left">
 			<div onclick="redirect(id3)" style="cursor: pointer" class="card book h-100 disponible papier francais">
@@ -95,7 +97,7 @@
 				<p class="card-text">Une présentation claire ainsi qu&apos;un texte concis et rigoureux sur le plan mathématique.</p>
 				</div>
 				  <div class="card-footer text-muted">
-  					<p class="card-text"><i class="far fa-check-square"></i>&nbsp;disponible&nbsp; <i class="fas fa-book"></i>&nbsp;papier&nbsp; <i class="fas fa-globe"></i>&nbsp;Français</p>
+  					<p class="card-text"><i class="far fa-check-square">&nbsp;disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
   					</div>
 			</div>
 			<div onclick="redirect(id8)" style="cursor: pointer" class="card book h-100 disponible numerique francais">
@@ -105,7 +107,7 @@
 				<p class="card-text">En plus de conserver l&apos;approche et la rigueur scientifique de l&apos;ouvrage de James Stewart</p>
 				</div>
 				<div class="card-footer text-muted">
-  					<p class="card-text"><i class="far fa-check-square"></i>&nbsp;disponible&nbsp; <i class="fas fa-book"></i>&nbsp;numérique&nbsp; <i class="fas fa-globe"></i>&nbsp;Français</p>
+  					<p class="card-text"><i class="far fa-check-square">&nbsp;disponible&nbsp;</i> <i class="fas fa-book">&nbsp;numérique&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
   				</div>
 			</div>
 
@@ -113,47 +115,63 @@
 				<img class="card-img-top" src="images/calcul3.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Caclul avancé</h3>
-				<p class="card-text">Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est</p>
+				<p class="card-text">Cette adaptation québécoise conçue pour s&apos;arrimer avec le niveau collégial est d&apos;une grande précision mathématique</p>
 				</div>
 				<div class="card-footer text-muted">
-  					<p class="card-text"><i class="far fa-check-square"></i>&nbsp;disponible&nbsp; <i class="fas fa-book"></i>&nbsp;papier&nbsp; <i class="fas fa-globe"></i>&nbsp;Français</p>
+  					<p class="card-text"><i class="far fa-check-square">&nbsp;disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
   				</div>
 			</div>
-			<div onclick="redirect(id5)" style="cursor: pointer" class="card book h-100 disponible">
+			<div onclick="redirect(id5)" style="cursor: pointer" class="card book h-100 disponible numerique">
 				<img class="card-img-top" src="images/algebre.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Algèbre linéaire</h3>
-				<p class="card-text">disponible</p>
+				<p class="card-text">Présente les concepts de base de l&apos;algèbre linéaire et les outils dont l&apos;étudiant</p>
 				</div>
+				<div class="card-footer text-muted">
+  					<p class="card-text"><i class="far fa-check-square">&nbsp;disponible&nbsp;</i> <i class="fas fa-book">&nbsp;numérique&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
+  				</div>
 			</div>
-			<div onclick="redirect(id7)" style="cursor: pointer" class="card book h-100 papier">
+			<div onclick="redirect(id7)" style="cursor: pointer" class="card book h-100 disponible papier">
 				<img class="card-img-top" src="images/discrete.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Maths discrètes</h3>
-				<p class="card-text">Disponible</p>
+				<p class="card-text">Encensé par les spécialistes de l&apos;informatique, cet ouvrage doit son succès à la clarté de ses exposés</p>
 				</div>
+				<div class="card-footer text-muted">
+  					<p class="card-text"><i class="far fa-check-square">&nbsp;disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
+  				</div>
 			</div>
-			<div onclick="redirect(id9)" class="card book h-100 papier">
+			<div onclick="redirect(id9)" class="card book papier h-100 papier">
 				<img class="card-img-top" src="images/variables.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Calcul à plusieurs variables</h3>
-				<p class="card-text">Non disponible</p>
+				<p class="card-text">L’art d’enseigner, disait l’écrivain Mark Van Doren, est l’art d’aider à découvrir.</p>
 				</div>
+				<div class="card-footer text-muted">
+  					<p class="card-text"><i class="far fa-square">&nbsp;non disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
+  				</div>
 			</div>
-			<div onclick="redirect(id10)" class="card book h-100 papier">
+			<div onclick="redirect(id10)" class="card book papier h-100 papier">
 				<img class="card-img-top" src="images/differentiel.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Calcul différent.</h3>
-				<p class="card-text">Non disponible</p>
+				<p class="card-text">Calcul différentiel s&apos;inscrit également dans le prolongement des trois compétences disciplinaires </p>
 				</div>
+				<div class="card-footer text-muted">
+  					<p class="card-text"><i class="far fa-square">&nbsp;non disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
+  				</div>
 			</div>
-			<div onclick="redirect(id11)" class="card book h-100 papier">
+			<div onclick="redirect(id11)" class="card book papier h-100 papier">
 				<img class="card-img-top" src="images/calc.jpg"  alt="Book">
 				<div class="card-body">
 				<h3 class="card-title">Maths simples</h3>
-				<p class="card-text">Non disponible</p>
+				<p class="card-text">NGilles Charron et Pierre Parent présentent la 8e édition de leur manuel. Son contenu a été révisé et sa structure </p>
 				</div>
+				<div class="card-footer text-muted">
+  					<p class="card-text"><i class="far fa-square">&nbsp;non disponible&nbsp;</i> <i class="fas fa-book">&nbsp;papier&nbsp;</i> <i class="fas fa-globe">&nbsp;Français&nbsp;</i></p>
+  			</div>
 			</div>
+			
 		</div>
 	</div>
 </section>
