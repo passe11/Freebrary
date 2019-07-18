@@ -229,13 +229,13 @@ $('#myform').submit(function() {
 });
 
 $('#login').submit(function() {
-  alert("test1");
   var email = document.getElementById("emailinput").value;
-  alert(email);
   var password= document.getElementById("passwordinput").value;
   if(email==="pmarl012@uottawa.ca"){
     //alert("pascal");
     localStorage.setItem("user","pascal");
+    $('#compte').css('display', 'inline-block');
+$('#login').css('display', 'none');  
   }
   });
 
